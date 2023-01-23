@@ -9,7 +9,7 @@ session_start();
 
  
 //--------- CHEMIN
-define("RACINE_SITE","/restaurant/");
+//define("RACINE_SITE","/restaurant/");
  
 //--------- VARIABLES
 $contenu = '';

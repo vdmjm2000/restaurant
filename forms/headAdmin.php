@@ -55,10 +55,8 @@
           <li><a href="#about">A propos</a></li>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#events">Evénement</a></li>
-          <li><a href="#chefs">Chefs</a></li>
-          <li><a href="#gallery">Gallerie</a></li>
-          <li><a href="">Profil</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="./profile.php">Profil</a></li>
+          <li><a href="./dashbordAdmin.php">Admin</a></li>
           <li><a href="./logout.php">Déconnexion</a></li>
 
 

@@ -56,8 +56,8 @@
           <li><a href="#menu">Menu</a></li>
           <li><a href="#events">Evénement</a></li>
           <li><a href="#chefs">Chefs</a></li>
-          <li><a href="#gallery">Gallerie</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="./booking.php">Reservation</a></li>
+          <li><a href="./profile.php">Profil</a></li>
           <li><a href="./logout.php">Déconnexion</a></li>
 
 
