@@ -4,6 +4,11 @@ require_once("./init.inc.php");
 if(!internauteEstConnecte()) header("location:login.php");
 // debug($_SESSION);
 
+$stmt = $mysqli->query("SELECT * FROM user, booking");
+$result = $stmt->fetch_assoc();
+
+$id = $_SESSION['user']['id'];
+
 $contenu .= '<form action="update.php" method="get">';
 $contenu .= '<p class="centre">id <strong>' . $_SESSION['user']['id'] . '</strong></p>';
 $contenu .= '<p class="centre">Bonjour <strong>' . $_SESSION['user']['prenom'] . '</strong></p>';
@@ -19,9 +24,16 @@ $contenu .= '<form action="traitement.php" method="get">
 </form>';
 
 
+$stmt = $mysqli->query("SELECT * FROM booking WHERE id_user= $id ORDER BY date_booking ASC , date_booking > NOW()");
+$result = $stmt->fetch_assoc();
+
+$date_booking = $result['date_booking'];
+$time_booking = $result['time_booking'];
+
+
+
 
 //--------------------------------- AFFICHAGE HTML ---------------------------------//
-
 
 
 if (internauteEstConnecteEtEstAdmin()) {
@@ -33,4 +45,17 @@ elseif (internauteEstConnecte()) {
 
 
 echo $contenu;
+
+echo '<br>';
+echo '<br>';
+
+ echo 'Mes reservations';
+ echo '<br>';
+
+echo ($id);
+
+echo '<br>';
+echo 'Ma prochaine réservation est le '.$date_booking.' à '.$time_booking;
+
+
 require_once("./footer.php");

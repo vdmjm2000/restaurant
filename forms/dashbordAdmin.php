@@ -15,7 +15,7 @@ else {
     echo $contenu;
 }
 
-$resultat = executeRequete("SELECT user.nom,user.adresse, user.commentaire, booking.date, booking.time FROM user JOIN booking ON user.id = booking.id_user;");
+$resultat = executeRequete("SELECT user.nom,user.adresse, user.commentaire, booking.date_booking, booking.time_booking, booking.nbr_people FROM user JOIN booking ON user.id = booking.id_user ORDER BY date_booking asc; ");
      
 $contenu .= '<h2> Affichage des reservations </h2>';
 $contenu .= 'Nombre de reservation : ' . $resultat->num_rows;
@@ -47,6 +47,8 @@ while ($ligne = $resultat->fetch_assoc())
 $contenu .= '</table><br><hr><br>';
 
 echo $contenu;
+
+
 
 ?>
 

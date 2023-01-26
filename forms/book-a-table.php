@@ -7,7 +7,7 @@
   */
 
   // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'vdmjm@hotmzil.com';
+  $receiving_email_address = 'vdmjm@hotmail.com';
 
  
   $book_a_table->ajax = true;
