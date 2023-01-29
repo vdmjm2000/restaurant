@@ -1,4 +1,5 @@
 /* Session */
+
 .erreur {
   background: #ff0000;
   padding: 5px;
@@ -13,8 +14,9 @@
 /*check*/
 
 .check {
-  display: flex;
+  display:flex;
   color:green;
+  font: size 0.5em;
 }
 
 /* Fonts */
@@ -363,6 +365,7 @@ section {
     padding: 0;
   }
 
+
   .navbar ul {
     margin: 0;
     padding: 0;
@@ -517,6 +520,14 @@ section {
     bottom: 0;
     transition: 0.3s;
     z-index: 9997;
+  }
+
+
+  .check {
+    display:grid;
+    font-size: smaller;
+    color:green;
+    font: size 0.5em;
   }
 
   .navbar ul {

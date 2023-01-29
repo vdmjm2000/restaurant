@@ -23,7 +23,9 @@ if($_POST)
                     $_SESSION['user'][$indice] = $element;
                 }
             }
-            header("location:profile.php");
+            
+            
+            "location:profile.php";
         }
         else
         {

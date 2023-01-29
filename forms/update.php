@@ -8,7 +8,7 @@ if(!internauteEstConnecte()) header("location:login.php");
 
 
 
-require_once("./headAdmin.php");
+require_once("./head.php");
 
 
 
