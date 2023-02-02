@@ -13,6 +13,11 @@ session_start();
  
 //--------- VARIABLES
 $contenu = '';
+$contenu_footer = '';
+$contenu_reservation = '';
+$contenu_plat = '';
+$contenu_heures = '';
+
  
 //--------- AUTRES INCLUSIONS
 require_once("fonction.inc.php");

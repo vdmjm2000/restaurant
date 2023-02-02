@@ -49,11 +49,11 @@ $tel = $_SESSION['user']['tel'];
   <label for="phone">Numéro de téléphone</label>
   <input type="tel" disabled="disabled" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone" value="<?php echo ($tel) ?>" required><br><br>
 
-  <label for="date">Date</label>
-  <input type="date" id="date" name="date" required><br><br>
+  <label for="date">Date :</label>
+<input type="date" id="date" name="date" min="<?php echo date("Y-m-d"); ?>" required><br><br>
 
 
- 
+   
   <label for="guests">Nombre de personnes</label>
   <input type="number" id="guests" name="guests" min="1" max="10" required><br><br>
 

@@ -24,7 +24,7 @@ elseif (internauteEstConnecte()) {
 
 if($_POST)
 {
-    debug($_POST);
+    //debug($_POST);
    
     $stmt = $mysqli->query("SELECT * FROM user, booking, time_booked");
     $result = $stmt->fetch_assoc();

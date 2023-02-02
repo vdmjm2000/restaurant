@@ -1,41 +1,44 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+if(isset($_GET['action']) && $_GET['action'] == "suppression")
+{   //$contenu .= $_GET['id_produit'];
+    $resultat = executeRequete("SELECT * FROM recipe WHERE id_recipe=$_GET[id_recipe]");
+    $produit_a_supprimer = $resultat->fetch_assoc();
+    //$chemin_photo_a_supprimer = $_SERVER['DOCUMENT_ROOT'] . $produit_a_supprimer['photo'];
+    //if(!empty($produit_a_supprimer['photo']) && file_exists($chemin_photo_a_supprimer)) unlink($chemin_photo_a_supprimer);
+    executeRequete("DELETE FROM recipe WHERE id_recipe=$_GET[id_recipe]");
+    $contenu .= '<div class="validation">Suppression du produit : ' . $_GET['id_recipe'] . '</div>';
+    $_GET['action'] = '#recipe';
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
+}
+
+$resultat1 = executeRequete1("SELECT * FROM recipe");
+
+$contenu_plat .= '<h2> Affichage des plats </h2>';
+$contenu_plat .= 'Nombre de plats : ' . $resultat1->num_rows;
+$contenu_plat .= '<table class="table table-striped"p id="profile" border="1"><tr>';
+
+while ($colonne = $resultat1->fetch_field()) {
+  $contenu_plat .= '<th>' . $colonne->name . '</th>';
+}
+
+//$contenu .= '<th>Modification</th>';
+$contenu_plat .= '<th>Supression</th>';
+$contenu_plat .= '</tr>';
+
+while ($ligne = $resultat1->fetch_assoc()) {
+  $contenu_plat .= '<tr>';
+  foreach ($ligne as $indice => $information) { {
+      $contenu_plat .= '<td>' . $information . '</td>';
+    }
   }
+  // $contenu .= '<td><a href="?action=modification&id_produit=' . $ligne['id_booking'] .'"><img src="../photo/icone/edit.png"></a></td>';
+  $contenu_plat .= '<td><a href="?action=suppression&id_recipe=' . $ligne['id_recipe'] .'");"><img src="../photo/icone/delete.png"></a></td>';
+  $contenu_plat .= '</tr>';
+}
+$contenu_plat .= '</table><br><hr><br>';
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
-
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send();
+echo $contenu_plat;
 ?>
+
+

@@ -2,7 +2,7 @@
 require_once("./init.inc.php");
 //--------------------------------- TRAITEMENTS PHP ---------------------------------//
 if(!internauteEstConnecte()) header("location:login.php");
-// debug($_SESSION);
+//debug($_SESSION);
 
 $stmt = $mysqli->query("SELECT * FROM user, booking");
 $result = $stmt->fetch_assoc();
@@ -29,6 +29,8 @@ $result = $stmt->fetch_assoc();
 
 $date_booking = $result['date_booking'];
 $time_booking = $result['time_booking'];
+
+
 
 
 

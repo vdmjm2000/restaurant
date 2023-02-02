@@ -10,6 +10,20 @@ function executeRequete($req)
     }
     return $resultat; // 
 }
+
+function executeRequete1($req)
+{
+    global $mysqli;
+    $resultat1 = $mysqli->query($req);
+    if(!$resultat1) // 
+    {
+        die("Erreur sur la requete sql.<br>Message : " . $mysqli->error . "<br>Code: " . $req);
+    }
+    return $resultat1; // 
+}
+
+
+
  
 function debug($var, $mode = 1)
 {
@@ -40,3 +54,10 @@ function internauteEstConnecteEtEstAdmin()
     if(internauteEstConnecte() && $_SESSION['user']['admin'] == 1) return true;
     else return false;
 }
+
+//---------------------------
+function getCurrentDay() {
+  return date("l");
+}
+
+ getCurrentDay();

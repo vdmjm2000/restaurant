@@ -1,4 +1,3 @@
-
 <?php
 
 include 'init.inc.php';
@@ -8,7 +7,7 @@ include 'init.inc.php';
 if($_POST)
 {
     // $contenu .=  "pseudo : " . $_POST['pseudo'] . "<br>mdp : " .  $_POST['mdp'] . "";
-    $resultat = executeRequete("SELECT * FROM user WHERE pseudo='$_POST[pseudo]'");
+    $resultat = executeRequete("UPDATE time_table SET id_timeTable = $_POST[id_timeTable], open_timelunch =$_POST[open_timelunch],close_timelunch= $_POST[close_timelunch],open_timeDinner=$_POST[open_timeDinner],close_timeDinner = $_POST[close_timeDinner] ");
     if($resultat->num_rows != 0)
     {
         // $contenu .=  '<div style="background:green">pseudo connu!</div>';
