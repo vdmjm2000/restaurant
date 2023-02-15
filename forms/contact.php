@@ -8,7 +8,7 @@ if(isset($_GET['action']) && $_GET['action'] == "suppression")
     //if(!empty($produit_a_supprimer['photo']) && file_exists($chemin_photo_a_supprimer)) unlink($chemin_photo_a_supprimer);
     executeRequete("DELETE FROM recipe WHERE id_recipe=$_GET[id_recipe]");
     $contenu .= '<div class="validation">Suppression du produit : ' . $_GET['id_recipe'] . '</div>';
-    $_GET['action'] = '#recipe';
+   // $_GET['action'] = '#recipe';
 
 }
 
@@ -39,6 +39,7 @@ while ($ligne = $resultat1->fetch_assoc()) {
 $contenu_plat .= '</table><br><hr><br>';
 
 echo $contenu_plat;
+
 ?>
 
 

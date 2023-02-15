@@ -7,9 +7,7 @@ require_once("./init.inc.php");
 if(!internauteEstConnecte()) header("location:login.php");
 
 
-
 require_once("./head.php");
-
 
 
 
@@ -31,10 +29,10 @@ if($_POST)
             executeRequete("UPDATE user SET civilite = '$_POST[civilite]', nom = '$_POST[nom]', prenom = '$_POST[prenom]', email = '$_POST[email]', ville = '$_POST[ville]', cp = '$_POST[cp]', adresse = '$_POST[adresse]',  commentaire = '$_POST[commentaire]' WHERE id = '$_GET[id]'");
             $contenu .= "<div class='validation'>Les modifications ont été faites!</u></a></div>";
             echo $contenu; 
-            
 
 
         }
+
 
 
         
@@ -55,7 +53,7 @@ $cp = $result['cp'];
 $commentaire = $result['commentaire'];
 $pseudo = $result['pseudo'];
 $mdp = $result['mdp'];
-var_dump($adresse);
+//var_dump($adresse);
 
 
 

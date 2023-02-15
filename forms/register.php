@@ -53,7 +53,7 @@ Vous avez un compte existant ? c'est par <a href="./login.php"> ici </a>
 
 
  <div class="form">
-<form method="post" action="" >
+<form method="post" action="">
 
     <label for="civilite">Civilité</label><br>
     <input name="civilite" value="m" checked="" type="radio">Homme

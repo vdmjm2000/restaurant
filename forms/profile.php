@@ -1,8 +1,30 @@
 <?php
 require_once("./init.inc.php");
-//--------------------------------- TRAITEMENTS PHP ---------------------------------//
+
+
+
+//------------------------------ TRAITEMENTS PHP ---------------------------------//
 if(!internauteEstConnecte()) header("location:login.php");
+
+//--------------------------------- AFFICHAGE HTML ---------------------------------//
+
+
+
+if (internauteEstConnecteEtEstAdmin()) {
+    require_once("./headAdmin.php");
+}
+elseif (internauteEstConnecte()) {
+    require_once("./head.php");
+}
+
 //debug($_SESSION);
+
+
+
+
+
+
+
 
 $stmt = $mysqli->query("SELECT * FROM user, booking");
 $result = $stmt->fetch_assoc();
@@ -24,15 +46,11 @@ $contenu .= '<form action="traitement.php" method="get">
 </form>';
 
 
-$stmt = $mysqli->query("SELECT * FROM booking WHERE id_user= $id ORDER BY date_booking ASC , date_booking > NOW()");
+$stmt = $mysqli->query("SELECT *, DATE_FORMAT('date_booking', '%d/%m')  FROM booking WHERE id_user= $id ORDER BY date_booking ASC , date_booking > NOW()");
 $result = $stmt->fetch_assoc();
 
 $date_booking = $result['date_booking'];
 $time_booking = $result['time_booking'];
-
-
-
-
 
 
 //--------------------------------- AFFICHAGE HTML ---------------------------------//

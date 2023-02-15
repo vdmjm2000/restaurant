@@ -61,3 +61,24 @@ function getCurrentDay() {
 }
 
  getCurrentDay();
+
+
+ //------------
+
+ function getCategoriesFromDB() {
+    $categories = array();
+    $conn = mysqli_connect("localhost", "root", "", "restaurant");
+    $query = "SELECT categorie_recipe.name, recipe.*
+    FROM categorie_recipe
+    INNER JOIN recipe ON categorie_recipe.id_categorie_recipe = recipe.id_categorie_recipe
+    ORDER BY categorie_recipe.name";
+    $result = mysqli_query($conn, $query);
+    while ($row = mysqli_fetch_assoc($result)) {
+      $categories[] = $row;
+    }
+    mysqli_close($conn);
+    return $categories;
+  }
+
+
+  

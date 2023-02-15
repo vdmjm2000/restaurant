@@ -19,6 +19,12 @@
   font: size 0.5em;
 }
 
+
+/*Horaires sur footer*/
+
+
+
+
 /* Fonts */
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
@@ -104,6 +110,11 @@ section {
 
 .section-header p span {
   color: green;
+}
+
+.plats {
+
+  text-align: center;
 }
 
 /*--------------------------------------------------------------

@@ -39,7 +39,7 @@
   
 </head>
 
-<body>
+
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
@@ -99,12 +99,3 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
       <div class="container">
-
-       
-
-      </div>
-    </div><!-- End Breadcrumbs -->
-
-
-
-  </main><!-- End #main -->
