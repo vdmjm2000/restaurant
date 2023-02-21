@@ -2,10 +2,6 @@
 
 require_once('./init.inc.php');
 
-
-//------------------------------ TRAITEMENTS PHP ---------------------------------//
-if(!internauteEstConnecte()) header("location:login.php");
-
 //--------------------------------- AFFICHAGE HTML ---------------------------------//
 
 require_once("./head.php");
@@ -35,9 +31,7 @@ if($_POST)
             }
    
 
-            executeRequete("INSERT INTO booking_visitor (id_user, date_booking, time_booking, nbr_people) VALUES ('$_POST[id_user]', '$_POST[date]', '$_POST[time_book]', '$_POST[guests] ,')");
+            executeRequete("INSERT INTO booking (id_user, date_booking, time_booking, nbr_people) VALUES ('$_POST[id_user]', '$_POST[date]', '$_POST[time_book]', '$_POST[guests] ,')");
             $contenu .= "<div class='validation'>Votre réservation pour le " .$_POST['date']. " à " .$_POST['time_book']. " est confirmée!</div>";
             echo $contenu;    
-
-
 ?>
