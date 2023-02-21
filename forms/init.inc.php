@@ -1,5 +1,4 @@
 <?php
- 
 
  if (getenv('JAWSDB_URL') !== false) {
 $dbparts = parse_url(getenv('JAWSDB_URL'));
@@ -18,9 +17,8 @@ if ($mysqli->connect_error) die('Un problème est survenu lors de la tentative d
 // $mysqli->set_charset("utf8");
  }
 
-
  // Définir la durée de validité à 1 heure (3600 secondes)
-session_set_cookie_params(15);
+session_set_cookie_params(3600);
 
 // Démarrer la session
 session_start();

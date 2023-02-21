@@ -1,29 +1,16 @@
 <?php
 require_once("./init.inc.php");
+require_once("./head.php");
 
 
 
 //------------------------------ TRAITEMENTS PHP ---------------------------------//
-if(!internauteEstConnecte()) header("location:login.php");
+if (!internauteEstConnecte()) header("location:login.php");
 
 //--------------------------------- AFFICHAGE HTML ---------------------------------//
 
 
-
-if (internauteEstConnecteEtEstAdmin()) {
-    require_once("./headAdmin.php");
-}
-elseif (internauteEstConnecte()) {
-    require_once("./head.php");
-}
-
 //debug($_SESSION);
-
-
-
-
-
-
 
 
 $stmt = $mysqli->query("SELECT * FROM user, booking");
@@ -32,7 +19,7 @@ $result = $stmt->fetch_assoc();
 $id = $_SESSION['user']['id'];
 
 $contenu .= '<form action="update.php" method="get">';
-$contenu .= '<p class="centre">id <strong>' . $_SESSION['user']['id'] . '</strong></p>';
+//$contenu .= '<p class="centre">id <strong>' . $_SESSION['user']['id'] . '</strong></p>';
 $contenu .= '<p class="centre">Bonjour <strong>' . $_SESSION['user']['prenom'] . '</strong></p>';
 $contenu .= '<div class="cadre"><h2> Voici vos informations </h2>';
 $contenu .= '<p> votre email est: ' . $_SESSION['user']['email'] . '<br>';
@@ -46,36 +33,35 @@ $contenu .= '<form action="traitement.php" method="get">
 </form>';
 
 
-$stmt = $mysqli->query("SELECT *, DATE_FORMAT('date_booking', '%d/%m')  FROM booking WHERE id_user= $id ORDER BY date_booking ASC , date_booking > NOW()");
-$result = $stmt->fetch_assoc();
+// Exécuter la requête SQL
+$sql = "SELECT *, DATE_FORMAT(date_booking, '%d/%m') AS formatted_date_booking, DATE_FORMAT(time_booking, '%Hh%i') AS formatted_hour_booking FROM booking WHERE id_user = $id AND DATE(date_booking) >= CURDATE() ORDER BY date_booking ASC, time_booking ASC";
+$resultat = executeRequete($sql);
 
-$date_booking = $result['date_booking'];
-$time_booking = $result['time_booking'];
-
-
-//--------------------------------- AFFICHAGE HTML ---------------------------------//
-
-
-if (internauteEstConnecteEtEstAdmin()) {
-    require_once("./headAdmin.php");
-}
-elseif (internauteEstConnecte()) {
-    require_once("./head.php");
-}
-
-
+    
 echo $contenu;
 
 echo '<br>';
 echo '<br>';
 
- echo 'Mes reservations';
- echo '<br>';
+echo 'Mes reservations';
+//echo ($id);
+echo '<br>';
 
-echo ($id);
+
+// Vérifier si la requête a renvoyé des résultats
+if ($resultat && $resultat->num_rows > 0) {
+    // Boucler sur les résultats et les afficher
+    while ($row = $resultat->fetch_assoc()) {
+        echo 'Réservation le ' . $row['formatted_date_booking'] . ' à ' . $row['formatted_hour_booking'] . ' pour ' . $row['nbr_people'] . ' personnes<br>';
+    }
+} else {
+    echo " Vous n'avez aucune réservation en cours. ";
+}
+
 
 echo '<br>';
-echo 'Ma prochaine réservation est le '.$date_booking.' à '.$time_booking;
+
+
 
 
 require_once("./footer.php");

@@ -24,7 +24,9 @@ function executeRequete1($req)
 
 
 
- 
+ //---- mode débug ----//
+
+
 function debug($var, $mode = 1)
 {
     echo '<div style="background: orange; padding: 5px; float: right; clear: both; ">';
@@ -55,7 +57,7 @@ function internauteEstConnecteEtEstAdmin()
     else return false;
 }
 
-//---------------------------
+//---------fonction pour avoir la date de jour-------///
 function getCurrentDay() {
   return date("l");
 }
@@ -63,7 +65,7 @@ function getCurrentDay() {
  getCurrentDay();
 
 
- //------------
+ //------------ Focntion pour obtenir la categorie
 
  function getCategoriesFromDB() {
     $categories = array();

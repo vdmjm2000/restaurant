@@ -1,27 +1,16 @@
 <?php
 
-
-
 require_once("./init.inc.php");
-
-
-
 
 
 
 //------------------------------ TRAITEMENTS PHP ---------------------------------//
 if(!internauteEstConnecte()) header("location:login.php");
 
-//--------------------------------- AFFICHAGE HTML ---------------------------------//
+
+require_once("./head.php");
 
 
-
-if (internauteEstConnecteEtEstAdmin()) {
-    require_once("./headAdmin.php");
-}
-elseif (internauteEstConnecte()) {
-    require_once("./head.php");
-}
 
 // récupération des données de la session en cours//
 
@@ -59,3 +48,7 @@ $tel = $_SESSION['user']['tel'];
 
   <input type="submit" value="Trouver un créneau disponible">
 </form>
+
+<?php require_once('./footer.php');
+?>
+

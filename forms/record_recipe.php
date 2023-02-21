@@ -10,12 +10,8 @@ if(!internauteEstConnecte()) header("location:login.php");
 
 //--------------------------------- AFFICHAGE HTML ---------------------------------//
 
-if (internauteEstConnecteEtEstAdmin()) {
-    require_once("./headAdmin.php");
-}
-elseif (internauteEstConnecte()) {
-    require_once("./head.php");
-}
+require_once("./head.php");
+
 
 
 if (isset($_POST['list_category'],  $_POST['titre'], $_POST['description'], $_POST['prix'], $_FILES['image']['tmp_name'])) {

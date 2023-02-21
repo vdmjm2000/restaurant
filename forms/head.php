@@ -38,64 +38,78 @@
 
   
 </head>
+  
+<body>
+
+ <!-- ======= Header ======= -->
+ <header id="header" class="header fixed-top d-flex align-items-center">
+   <div class="container d-flex align-items-center justify-content-between">
+     <a href="../index.php" class="logo d-flex align-items-center me-auto me-lg-0">
+       <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="../images/logo.jpg" alt="" width="200px" height="300px">-->
+       <h1>Chef Jeanmich<span>.</span></h1>
+     </a>
+
+     <?php 
+
+     if (internauteEstConnecteEtEstAdmin()) {      
+
+     echo ' <nav id="navbar" class="navbar">';
+     echo ' <ul> ';
+     echo ' <li><a href="../index.php">Accueil</a></li>';
+     echo ' <li><a href="./profile.php">Profil</a></li>';
+     echo ' <li><a href="./dashbordAdmin.php">Admin</a></li>';
+     echo ' <li><a href="./logout.php">Déconnexion</a></li>';
+     echo ' </ul>';
+     echo '</nav><!-- .navbar -->';
+
+     }   elseif (internauteEstConnecte())  {
+
+       echo ' <nav id="navbar" class="navbar">';
+       echo ' <ul> ';
+       echo ' <li><a href="../index.php">Accueil</a></li>';
+       echo ' <li><a href="./profile.php">Profil</a></li>';  
+       echo ' <li><a href="./logout.php">Déconnexion</a></li>';
+       echo ' </ul>';
+       echo '</nav><!-- .navbar -->';
+
+
+     }  else {
+
+       echo ' <nav id="navbar" class="navbar">';
+       echo ' <ul> ';
+       echo ' <li><a href="#hero">Accueil</a></li>';
+       echo ' <li><a href="#about">A propos</a></li>';
+       echo ' <li><a href="#menu">Menu</a></li>';
+       echo ' <li><a href="#events">Evénement</a></li>';
+       echo ' <li><a href="#gallery">Gallerie</a></li>';
+       echo ' <li><a href="#contact">Contact</a></li>';
+       echo '  <li><a href="./register.php">S inscrire</a></li>';
+       echo '   <li><a href="./login.php">Se connecter</a></li>'; 
+       echo ' </ul>';
+       echo '</nav><!-- .navbar -->';
 
 
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+     }
 
-      <a href="../index.php" class="logo d-flex align-items-center me-auto me-lg-0">
-        <!-- Uncommen the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Chef Jean-Mi<span>.</span></h1>
-      </a>
+     ?>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="#hero">Accueil</a></li>
-          <li><a href="#about">A propos</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#events">Evénement</a></li>
-          <li><a href="#chefs">Chefs</a></li>
-          <li><a href="./booking.php">Reservation</a></li>
-          <li><a href="./profile.php">Profil</a></li>
-          <li><a href="./logout.php">Déconnexion</a></li>
-
-
-          <!--
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-          
-            <ul>
-            <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-            </li>
-
-          -->
-        </ul>
-      </nav><!-- .navbar -->
-
-      <a class="btn-book-a-table" href="./booking.php">Réserver une table</a>
+<a class="btn-book-a-table" href="./booking.php">Réserver une table</a>
+      <!-- <a class="btn-signup" href="./forms/register.php">S'enregistrer</a> -->
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
     </div>
   </header><!-- End Header -->
+</header>
+
 
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
       <div class="container">
+
+</body>
+
+

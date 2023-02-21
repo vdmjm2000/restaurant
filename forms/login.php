@@ -1,8 +1,16 @@
 
 <?php
 
-include 'init.inc.php';
+require_once("./init.inc.php");
 
+require_once("./head.php");
+
+
+
+//--------------------------------- AFFICHAGE HTML ---------------------------------//
+
+
+//debug($_SESSION);
 
 //--------------------------------- TRAITEMENTS PHP ---------------------------------//
 if($_POST)
@@ -39,12 +47,15 @@ if($_POST)
 }
 
 ?>
-<?php include 'head.php'; ?>
 
 <?php echo $contenu; ?>
+<div class="text-center">
 
+<a class="btn-book-a-table" href="./booking_visitor.php">Réserver une table sans se connecter</a>
 
- 
+</div>
+
+<br> 
 <form class="form" method="post" action="">
     <label for="pseudo">Pseudo</label><br>
     <input type="text" id="pseudo" name="pseudo"><br> <br>
@@ -52,11 +63,14 @@ if($_POST)
     <label for="mdp">Mot de passe</label><br>
     <input type="password" id="mdp" name="mdp"><br><br>
  
-     <input type="submit" class="btn btn-outline-info value="Se connecter">
+     <input type="submit" class="btn btn-outline-info" value="Se connecter">
 </form>
 
 <br>
 <br>
+<div class="form">
+Vous n'avez toujours pas de compte ? Alors c'est par <a href="./register.php"> ici </a>
+</div>
 <br>
 
 

@@ -1,18 +1,10 @@
 <?php
 
 include_once('init.inc.php');
+include_once('./head.php');
 
 //------------------------------ TRAITEMENTS PHP ---------------------------------//
 if (!internauteEstConnecte()) header("location:login.php");
-
-if (internauteEstConnecteEtEstAdmin()) {
-  require_once("headAdmin.php");
-} elseif (internauteEstConnecte()) {
-  require_once("login.php");
-} else {
-  $contenu .= '<div class="erreur">Veuillez vous connecter <a href ="./login.php">ici</a> pour acceder à cette page</div> ';
-  echo $contenu;
-}
 
 
 ?>
@@ -90,7 +82,7 @@ if (internauteEstConnecteEtEstAdmin()) {
           $contenu_reservation .= '</tr>';
 
           while ($ligne = $resultat->fetch_assoc()) {
-            $contenu .= '<tr>';
+            $contenu_reservation .= '<tr>';
             foreach ($ligne as $indice => $information) { {
                 $contenu_reservation .= '<td>' . $information . '</td>';
               }
@@ -106,6 +98,7 @@ if (internauteEstConnecteEtEstAdmin()) {
           ?>
 
         </div>
+
 
 
         <div class="tab-pane fade" id="recipe">
@@ -130,27 +123,32 @@ if (internauteEstConnecteEtEstAdmin()) {
                   <?php endwhile; ?>
                 </select>
               </div>
-              </div>
-              <div class="form-group">
-                <label for="titre">Titre:</label>
-                <input type="text" class="form-control" id="titre" name="titre">
-              </div>
-              <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea class="form-control" id="description" name="description"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="prix">Prix:</label>
-                <input type="number" class="form-control" id="prix" name="prix">
-              </div>
-              <div class="form-group">
-                <label for="image">Image:</label>
-                <input type="hidden" name="MAX_FILE_SIZE" value="250000" />
-                <input type="file" name="image" size=50 />
-              </div>
-              <button type="submit" class="btn btn-default">Enregistrer</button>
-            </form>
           </div>
+          <div class="form-group">
+            <label for="titre">Titre:</label>
+            <input type="text" class="form-control" id="titre" name="titre">
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="prix">Prix:</label>
+            <input type="number" class="form-control" id="prix" name="prix">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="image">Image:</label>
+            <br>
+            <input type="hidden" name="MAX_FILE_SIZE" value="250000" />
+            <input type="file" name="image" size=50 />
+          </div>
+          <br>
+          <div class="form-group">
+            <button type="submit" class="btn btn-outline-info">Enregistrer</button>
+          </div>
+          </form>
+
           <div>
 
             <?php require_once("./contact.php"); ?>
@@ -176,7 +174,6 @@ if (internauteEstConnecteEtEstAdmin()) {
         <p>Menu</p>
         <h3>Horaires</h3>
       </div>
-
       <div>
         <form action="./record_dailyHour.php" method="post">
 
@@ -216,6 +213,8 @@ if (internauteEstConnecteEtEstAdmin()) {
               <br>
               <br>
               <input type="submit" value="Enregistrer les horaires">
+            </div>
+
         </form>
         <?php
 
@@ -242,7 +241,7 @@ if (internauteEstConnecteEtEstAdmin()) {
             }
           }
           // $contenu_heures .= '<td><a href="?action=modification&id_produit=' . $ligne['id_booking'] .'"><img src="../photo/icone/edit.png"></a></td>';
-          $contenu_heures .= '<td><a href="?action=suppression&id_timeTable=' . $ligne['id_timeTable'] . '");"><img src="../photo/icone/delete.png"></a></td>';
+          $contenu_heures .= '<td><a href="?action=suppression&id_timeTable=' . $ligne['id_timeTable'] . '");"><img src=" ../images/poubelle.gif"></a></td>';
           $contenu_heures .= '</tr>';
         }
         $contenu_heures .= '</table><br><hr><br>';
@@ -251,11 +250,6 @@ if (internauteEstConnecteEtEstAdmin()) {
         ?>
 
       </div>
-
-
-
-
-
 
     </div><!-- Fin partie Horaires -->
 

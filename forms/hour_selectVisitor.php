@@ -9,19 +9,14 @@ require_once("./head.php");
 
 
 
-
-//------------------------------ TRAITEMENTS PHP ---------------------------------//
-if (!internauteEstConnecte()) header("location:login.php");
-
 //--------------------------------- AFFICHAGE HTML ---------------------------------//
 
 
 
 
-$id = $_SESSION['user']['id'];
-$nom = $_SESSION['user']['nom'];
-$email = $_SESSION['user']['email'];
-$tel = $_SESSION['user']['tel'];
+$nom = $_POST['name'];
+$email = $_POST['email'];
+$tel = $_POST['phone'];
 
 $date_book = $_POST['date'];
 $guests = $_POST['guests'];
@@ -32,7 +27,7 @@ $guests = $_POST['guests'];
 
 
 
-<form action="./record_booked.php " method="post" id="form_booking">
+<form action="./record_bookedVisitor.php " method="post" id="form_booking">
 
   <label for="name"></label>
   <input type="hidden" id="id_user" name="id_user" placeholder="id" value="<?php echo ($id) ?>"><br><br>
@@ -96,7 +91,7 @@ $guests = $_POST['guests'];
   } else {
     echo 'Aucun horaire disponible pour la date sélectionnée avec le nombre de personnes renseigné';
     echo '<br>';
-    echo 'Veuillez renseigner une autre date <a href="./booking.php">&nbsp; ici </a>';
+    echo 'Veuillez renseigner une autre date <a href="./booking_visitor.php">&nbsp; ici </a>';
   }
 
   //echo 'le nombre de personne sélectionné est ' . $_POST['guests'];
