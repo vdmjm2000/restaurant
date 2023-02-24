@@ -5,6 +5,8 @@ include_once('./head.php');
 
 //------------------------------ TRAITEMENTS PHP ---------------------------------//
 if (!internauteEstConnecte()) header("location:login.php");
+if (!internauteEstConnecteEtEstAdmin()) header("location:login.php");
+
 
 
 ?>
@@ -67,7 +69,12 @@ if (!internauteEstConnecte()) header("location:login.php");
 
           <?php
 
-          $resultat = executeRequete("SELECT user.nom,user.adresse, user.commentaire, booking.date_booking, booking.time_booking, booking.nbr_people FROM user JOIN booking ON user.id = booking.id_user ORDER BY date_booking asc; ");
+          $resultat = executeRequete("SELECT user.nom AS Nom , user.tel AS Téléphone, user.commentaire, DATE_FORMAT(booking.date_booking, '%d/%m/%y') AS Jour, DATE_FORMAT(booking.time_booking, '%H:%i') AS Heure, booking.nbr_people AS Nombre
+          FROM user 
+          JOIN booking 
+          ON user.id = booking.id_user 
+          AND DATE(booking.date_booking) >= CURDATE()
+          ORDER BY date_booking asc; ");
 
           $contenu_reservation .= '<h2> Affichage des reservations </h2>';
           $contenu_reservation .= 'Nombre de reservation : ' . $resultat->num_rows;
@@ -106,8 +113,35 @@ if (!internauteEstConnecte()) header("location:login.php");
           <div class="tab-header text-center">
             <p>Menu</p>
             <h3>Plats</h3>
-          </div>
+        </div>
+
           <?php
+
+
+// Connexion à la base de données
+$pdo = new PDO('mysql:host=localhost;dbname=restaurant', 'root', '');
+
+// Affichage de la popup print
+echo '<script type="text/javascript">
+        function showPrintPopup() {
+            var printPopup = window.open("", "printPopup", "width=500,height=500");
+            printPopup.document.write("<html><head><title>Popup print</title></head><body>");
+            printPopup.document.write("<h1>Ajouter une nouvelle catégorie</h1>");
+            printPopup.document.write("<form method=\"post\" action=\"ajouter_categorie.php\">"); // Ouvre le formulaire avec laction "ajouter_categorie.php"
+            printPopup.document.write("<label for=\"name\">Nom :</label>"); // Utilise "name" comme identifiant plutôt que "categorie_recipe"
+            printPopup.document.write("<input type=\"text\" id=\"categorie\" name=\"categorie\" placeholder=\"Entrez le nom de la catégorie\">"); // Ajoute un champ texte pour le nom de la catégorie
+            printPopup.document.write("<input type=\"submit\" value=\"Ajouter catégorie\">");
+            printPopup.document.write("</form>");
+            printPopup.document.write("</body></html>");
+            printPopup.document.close();
+        }
+    </script>';
+
+// Bouton pour afficher la popup print
+echo '<button onclick="showPrintPopup()">Ajouter catégorie</button>';
+
+
+
           $resultat_catégoriePlat = executeRequete1("SELECT name FROM categorie_recipe");
           ?>
 

@@ -26,7 +26,6 @@ $guests = $_POST['guests'];
 ?>
 
 
-
 <form action="./record_bookedVisitor.php " method="post" id="form_booking">
 
   <label for="name"></label>

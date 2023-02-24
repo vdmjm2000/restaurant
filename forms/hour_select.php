@@ -31,6 +31,7 @@ $guests = $_POST['guests'];
 ?>
 
 
+<div class="text-center">
 
 <form action="./record_booked.php " method="post" id="form_booking">
 
@@ -38,22 +39,23 @@ $guests = $_POST['guests'];
   <input type="hidden" id="id_user" name="id_user" placeholder="id" value="<?php echo ($id) ?>"><br><br>
 
   <label for="name">Nom</label>
+  <br>
   <input type="text" disabled="disabled" id="name" name="name" placeholder="Entrez votre nom" value="<?php echo ($nom) ?>"><br><br>
 
   <label for="email">Email</label>
+  <br>
   <input type="email" disabled="disabled" id="email" name="email" placeholder="Entrez votre email" value="<?php echo ($email) ?>" required><br><br>
 
   <label for="phone">Numéro de téléphone</label>
+  <br>
   <input type="tel" disabled="disabled" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone" value="<?php echo ($tel) ?>" required><br><br>
 
   <label for="date">Date</label>
-  <input type="date" id="date" name="date" value="<?php echo ($date_book) ?>" required><br><br>
-
-
+  <input type="date" id="date" name="date" value="<?php echo ($date_book) ?>" required> &ensp; &ensp;
 
   <label for="guests">Nombre de personnes</label>
+  
   <input type="number" id="guests" name="guests" value="<?php echo ($guests) ?>" min="1" max="10" required><br><br>
-
 
 
 
@@ -115,6 +117,8 @@ $guests = $_POST['guests'];
   }
   ?>
 </form>
+
+</div>
 
 <!-- votre code HTML actuel -->
 <?php

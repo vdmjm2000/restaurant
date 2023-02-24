@@ -1630,7 +1630,7 @@ section {
   transition: 0.5s;
   color: #fff;
   background: #906427;
-  box-shadow: 0 8px 28px rgba(206, 18, 18, 0.2);
+  box-shadow: 0 8px 28px #392c1e;
 }
 
 .hero .btn-book-a-table:hover {

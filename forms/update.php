@@ -9,7 +9,14 @@ if(!internauteEstConnecte()) header("location:login.php");
 
 require_once("./head.php");
 
+if (isset($_SESSION['user']['id']) && $_SESSION['user']['id'] == $_GET['id']) {
+    // L'utilisateur est autorisé à accéder à cette page
+} else {
+    session_destroy(); // détruire la session en cours
+    header('login.php');
+    echo 'Vous n avez pas les accés à cette page';
 
+}
 
 
 //--------------------------------- TRAITEMENTS PHP Modification ---------------------------------//
@@ -26,7 +33,7 @@ if($_POST)
             {
                 $_POST[$indice] = htmlEntities(addSlashes($valeur));
             }
-            executeRequete("UPDATE user SET civilite = '$_POST[civilite]', nom = '$_POST[nom]', prenom = '$_POST[prenom]', email = '$_POST[email]', ville = '$_POST[ville]', cp = '$_POST[cp]', adresse = '$_POST[adresse]',  commentaire = '$_POST[commentaire]' WHERE id = '$_GET[id]'");
+            executeRequete("UPDATE user SET civilite = '$_POST[civilite]', nom = '$_POST[nom]', prenom = '$_POST[prenom]', email = '$_POST[email]',tel = '$_POST[tel]', ville = '$_POST[ville]', cp = '$_POST[cp]', adresse = '$_POST[adresse]',  commentaire = '$_POST[commentaire]' WHERE id = '$_GET[id]'");
             $contenu .= "<div class='validation'>Les modifications ont été faites!</u></a></div>";
             echo $contenu; 
 
@@ -47,6 +54,7 @@ $id = $result['id'];
 $nom = $result['nom'];
 $prenom = $result['prenom'];
 $email = $result['email'];
+$tel = $result['tel'];
 $adresse = $result['adresse'];
 $ville = $result['ville'];
 $cp = $result['cp'];
@@ -82,6 +90,8 @@ $mdp = $result['mdp'];
         <label for="email">Email</label><br>
         <input type="e4mail" id="email" name="email" placeholder="exemple@gmail.com" value="<?php echo ($email) ?>"><br><br>
 
+        <label for="email">Téléphone</label><br>
+        <input type="e4mail" id="tel" name="tel" placeholder="Votre tel" value="<?php echo ($tel) ?>"><br><br>
 
         <label for="ville">Ville</label><br>
         <input type="text" id="ville" name="ville" placeholder="votre ville" pattern="[a-zA-Z0-9-_.]{5,15}" title="caractères acceptés : a-zA-Z0-9-_." value="<?php echo ($ville) ?>"><br><br>

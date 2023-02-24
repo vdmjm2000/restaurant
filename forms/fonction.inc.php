@@ -22,6 +22,17 @@ function executeRequete1($req)
     return $resultat1; // 
 }
 
+function executeRequete2($req)
+{
+    global $mysqli;
+    $resultat1 = $mysqli->query($req);
+    if(!$resultat1) // 
+    {
+        die("Erreur sur la requete sql.<br>Message : " . $mysqli->error . "<br>Code: " . $req);
+    }
+    return $resultat1; // 
+}
+
 
 
  //---- mode débug ----//

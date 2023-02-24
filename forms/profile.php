@@ -20,13 +20,14 @@ $id = $_SESSION['user']['id'];
 
 $contenu .= '<form action="update.php" method="get">';
 //$contenu .= '<p class="centre">id <strong>' . $_SESSION['user']['id'] . '</strong></p>';
-$contenu .= '<p class="centre">Bonjour <strong>' . $_SESSION['user']['prenom'] . '</strong></p>';
+$contenu .= '<p class="centre">Bonjour <strong>' . $result['prenom'] . '</strong></p>';
 $contenu .= '<div class="cadre"><h2> Voici vos informations </h2>';
-$contenu .= '<p> votre email est: ' . $_SESSION['user']['email'] . '<br>';
-$contenu .= 'votre ville est: ' . $_SESSION['user']['ville'] . '<br>';
-$contenu .= 'votre cp est: ' . $_SESSION['user']['cp'] . '<br>';
-$contenu .= 'Commentaires: ' . $_SESSION['user']['commentaire'] . '<br>';
-$contenu .= 'votre adresse est: ' . $_SESSION['user']['adresse'] . '</p></div><br><br>';
+$contenu .= 'votre email est: ' . $result['email'] . '<br>';
+$contenu .= 'votre téléphone est: ' . $result['tel'] . '<br>';
+$contenu .= 'votre ville est: ' . $result['ville'] . '<br>';
+$contenu .= 'votre cp est: ' . $result['cp'] . '<br>';
+$contenu .= 'Commentaires: ' . $result['commentaire'] . '<br>';
+$contenu .= 'votre adresse est: ' . $result['adresse'] . '</p></div><br><br>';
 $contenu .= '<form action="traitement.php" method="get">
 <input type="hidden" name="id" value=' . $_SESSION['user']['id'] . '>
 <input type="submit" value="Modifier">

@@ -7,7 +7,8 @@ require_once("./head.php");
 
 
 ?>
-
+<br>
+<br>
 <form action="./hour_selectVisitor.php " method="post" id="form_booking">
 
 <label for="name"></label>

@@ -2,7 +2,10 @@
 
 if(isset($_GET['action']) && $_GET['action'] == "suppression")
 {   //$contenu .= $_GET['id_produit'];
-    $resultat5 = executeRequete("SELECT * FROM recipe WHERE id_recipe=$_GET[id_recipe]");
+    $resultat5 = executeRequete("SELECT categorie_recipe.name, recipe.title, recipe.description, recipe.price
+    FROM recipe, categorie_recipe 
+    WHERE recipe.id_recipe = categorie_recipe.id_categorie_recipe");
+
     $produit_a_supprimer = $resultat5->fetch_assoc();
     //$chemin_photo_a_supprimer = $_SERVER['DOCUMENT_ROOT'] . $produit_a_supprimer['photo'];
     //if(!empty($produit_a_supprimer['photo']) && file_exists($chemin_photo_a_supprimer)) unlink($chemin_photo_a_supprimer);
@@ -12,7 +15,9 @@ if(isset($_GET['action']) && $_GET['action'] == "suppression")
 
 }
 
-$resultat5 = executeRequete("SELECT * FROM recipe");
+$resultat5 = executeRequete("SELECT recipe.id_recipe, categorie_recipe.name, recipe.title, recipe.description, recipe.price
+FROM recipe, categorie_recipe 
+WHERE recipe.id_categorie_recipe = categorie_recipe.id_categorie_recipe");
 
 $contenu_plat .= '<h2> Affichage des plats </h2>';
 $contenu_plat .= 'Nombre de plats : ' . $resultat5->num_rows;
