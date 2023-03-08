@@ -1,0 +1,156 @@
+[24-Feb-2023 22:04:56 UTC] PHP Warning:  Undefined variable $id in /home/z95aoomu/public_html/forms/hour_selectVisitor.php on line 32
+[24-Feb-2023 22:05:09 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[24-Feb-2023 22:05:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[24-Feb-2023 22:05:09 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[24-Feb-2023 22:05:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[24-Feb-2023 22:05:09 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[24-Feb-2023 22:05:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[24-Feb-2023 22:05:09 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[24-Feb-2023 22:05:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[24-Feb-2023 22:05:22 UTC] PHP Warning:  Undefined variable $id in /home/z95aoomu/public_html/forms/hour_selectVisitor.php on line 32
+[24-Feb-2023 22:22:13 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/z95aoomu/public_html/forms/init.inc.php on line 15
+[24-Feb-2023 22:22:18 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/z95aoomu/public_html/forms/init.inc.php on line 15
+[24-Feb-2023 22:23:44 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'z95aoomu'@'localhost' (using password: NO) in /home/z95aoomu/public_html/forms/init.inc.php on line 15
+[24-Feb-2023 22:24:17 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'z95aoomu'@'localhost' (using password: NO) in /home/z95aoomu/public_html/forms/init.inc.php on line 15
+[24-Feb-2023 22:24:21 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'z95aoomu'@'localhost' (using password: NO) in /home/z95aoomu/public_html/forms/init.inc.php on line 15
+[24-Feb-2023 22:24:21 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'z95aoomu'@'localhost' (using password: NO) in /home/z95aoomu/public_html/forms/init.inc.php on line 15
+[24-Feb-2023 22:39:23 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[24-Feb-2023 22:39:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[24-Feb-2023 22:39:23 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[24-Feb-2023 22:39:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[24-Feb-2023 22:39:23 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[24-Feb-2023 22:39:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[24-Feb-2023 22:39:23 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[24-Feb-2023 22:39:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[24-Feb-2023 22:39:37 UTC] PHP Warning:  Undefined variable $id in /home/z95aoomu/public_html/forms/hour_selectVisitor.php on line 32
+[24-Feb-2023 22:47:46 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[24-Feb-2023 22:47:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[24-Feb-2023 22:47:46 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[24-Feb-2023 22:47:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[24-Feb-2023 22:47:46 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[24-Feb-2023 22:47:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[24-Feb-2023 22:47:46 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[24-Feb-2023 22:47:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[25-Feb-2023 00:39:28 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[25-Feb-2023 00:39:28 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[25-Feb-2023 00:39:28 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[25-Feb-2023 00:39:28 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[25-Feb-2023 00:39:28 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[25-Feb-2023 00:39:28 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[25-Feb-2023 00:39:28 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[25-Feb-2023 00:39:28 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[25-Feb-2023 10:10:58 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[25-Feb-2023 10:10:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[25-Feb-2023 10:10:58 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[25-Feb-2023 10:10:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[25-Feb-2023 10:10:58 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[25-Feb-2023 10:10:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[25-Feb-2023 10:10:58 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[25-Feb-2023 10:10:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[25-Feb-2023 23:42:15 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[25-Feb-2023 23:42:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[25-Feb-2023 23:42:15 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[25-Feb-2023 23:42:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[25-Feb-2023 23:42:15 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[25-Feb-2023 23:42:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[25-Feb-2023 23:42:15 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[25-Feb-2023 23:42:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[26-Feb-2023 06:25:44 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[26-Feb-2023 06:25:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[26-Feb-2023 06:25:44 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[26-Feb-2023 06:25:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[26-Feb-2023 06:25:44 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[26-Feb-2023 06:25:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[26-Feb-2023 06:25:44 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[26-Feb-2023 06:25:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[26-Feb-2023 09:40:12 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[26-Feb-2023 09:40:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[26-Feb-2023 09:40:12 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[26-Feb-2023 09:40:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[26-Feb-2023 09:40:12 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[26-Feb-2023 09:40:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[26-Feb-2023 09:40:12 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[26-Feb-2023 09:40:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[26-Feb-2023 16:18:00 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[26-Feb-2023 16:18:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[26-Feb-2023 16:18:00 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[26-Feb-2023 16:18:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[26-Feb-2023 16:18:00 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[26-Feb-2023 16:18:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[26-Feb-2023 16:18:00 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[26-Feb-2023 16:18:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[26-Feb-2023 19:43:03 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[26-Feb-2023 19:43:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[26-Feb-2023 19:43:03 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[26-Feb-2023 19:43:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[26-Feb-2023 19:43:03 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[26-Feb-2023 19:43:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[26-Feb-2023 19:43:03 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[26-Feb-2023 19:43:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[26-Feb-2023 21:43:44 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[26-Feb-2023 21:43:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[26-Feb-2023 21:43:44 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[26-Feb-2023 21:43:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[26-Feb-2023 21:43:44 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[26-Feb-2023 21:43:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[26-Feb-2023 21:43:44 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[26-Feb-2023 21:43:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[26-Feb-2023 21:43:56 UTC] PHP Warning:  Undefined variable $id in /home/z95aoomu/public_html/forms/hour_selectVisitor.php on line 32
+[26-Feb-2023 21:56:32 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/z95aoomu/public_html/forms/init.inc.php on line 15
+[26-Feb-2023 21:56:34 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/z95aoomu/public_html/forms/init.inc.php on line 15
+[26-Feb-2023 21:56:35 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/z95aoomu/public_html/forms/init.inc.php on line 15
+[27-Feb-2023 03:26:36 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 03:26:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 03:26:36 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 03:26:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 03:26:36 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 03:26:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 03:26:36 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 03:26:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 09:10:32 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 09:10:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 09:10:32 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 09:10:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 09:10:32 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 09:10:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 09:10:32 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 09:10:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 12:24:56 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 12:24:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 12:24:56 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 12:24:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 12:24:56 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 12:24:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 12:24:56 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 12:24:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 12:25:27 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 12:25:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 12:25:27 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 12:25:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 12:25:27 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 12:25:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 12:25:27 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 12:25:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 12:30:42 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 12:30:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 12:30:42 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 12:30:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 12:30:42 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 12:30:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 12:30:42 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 12:30:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 12:30:48 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 12:30:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 17
+[27-Feb-2023 12:30:48 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 12:30:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 18
+[27-Feb-2023 12:30:48 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 12:30:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 19
+[27-Feb-2023 12:30:48 UTC] PHP Warning:  Undefined array key "user" in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 12:30:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/z95aoomu/public_html/forms/booking.php on line 20
+[27-Feb-2023 12:31:26 UTC] PHP Warning:  Undefined variable $id in /home/z95aoomu/public_html/forms/hour_selectVisitor.php on line 32
+[27-Feb-2023 12:31:34 UTC] PHP Warning:  Undefined array key "id_user" in /home/z95aoomu/public_html/forms/record_bookedVisitor.php on line 34
+[27-Feb-2023 12:31:34 UTC] PHP Warning:  Undefined array key "date" in /home/z95aoomu/public_html/forms/record_bookedVisitor.php on line 34
+[27-Feb-2023 12:31:34 UTC] PHP Warning:  Undefined array key "time_book" in /home/z95aoomu/public_html/forms/record_bookedVisitor.php on line 34
+[27-Feb-2023 12:31:34 UTC] PHP Warning:  Undefined array key "guests" in /home/z95aoomu/public_html/forms/record_bookedVisitor.php on line 34
+[27-Feb-2023 12:31:34 UTC] PHP Warning:  Undefined array key "date" in /home/z95aoomu/public_html/forms/record_bookedVisitor.php on line 35
+[27-Feb-2023 12:31:34 UTC] PHP Warning:  Undefined array key "time_book" in /home/z95aoomu/public_html/forms/record_bookedVisitor.php on line 35

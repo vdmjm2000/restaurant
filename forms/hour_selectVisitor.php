@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+  function changeColor(element) {
+  var radios = document.getElementsByName('time_book');
+  for (var i = 0; i < radios.length; i++) {
+    radios[i].parentElement.classList.remove('selected');
+  }
+  element.parentElement.classList.add('selected');
+}
+    
+  </script>
+</head>
+<body>
+
+
+
 <?php
 
 
@@ -81,12 +104,13 @@ $guests = $_POST['guests'];
   if (count($available_times) > 0) {
 
       foreach ($available_times as $time_capacity) {
-        echo '<div class="btn-group btn-group-toggle" data-toggle="buttons">';
+        echo '<div class="btn-group btn-group-toggle=" data-toggle="buttons">';
         echo '<label class="btn btn-secondary">';
-        echo '<input type="radio" name="time_book"  value="' . $time_capacity['time'] . '">&nbsp;&nbsp;' . $time_capacity['time'] . '&nbsp;&nbsp;&nbsp;';
-      echo '(' . $time_capacity['capacity'] . ')&nbsp;&nbsp;&nbsp;';
-      echo '</div>';
-    }
+        echo '<input type="radio" name="time_book"  value="' . $time_capacity['time'] . '" onclick="changeColor(this)">&nbsp;&nbsp;' . $time_capacity['time'] . '&nbsp;&nbsp;&nbsp;';
+        echo '(' . $time_capacity['capacity'] . ')&nbsp;&nbsp;&nbsp;';
+        echo '</div>';
+      }
+    
   } else {
     echo 'Aucun horaire disponible pour la date sélectionnée avec le nombre de personnes renseigné';
     echo '<br>';
@@ -114,3 +138,7 @@ $guests = $_POST['guests'];
 <?php
 include_once('./footer.php');
 ?>
+
+  
+</body>
+</html>

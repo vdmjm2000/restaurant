@@ -16,8 +16,8 @@ require_once('./forms/init.inc.php')
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../assets/img/aa.ico" rel="icon">
+  <link href="../assets/img/aa.ico" rel="apple-touch-icon">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,38 +37,38 @@ require_once('./forms/init.inc.php')
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="./images/logo.jpg" alt="" width="200px" height="300px">
+        <img src="./images/logo.jpg" alt="" width="60px" height="60px">
         <!--<h1>Chef Jeanmich<span>.</span></h1> -->
       </a>
 
-      <?php 
+      <?php
 
-      if (internauteEstConnecteEtEstAdmin()) {      
+      if (internauteEstConnecteEtEstAdmin()) {
 
-      echo ' <nav id="navbar" class="navbar">';
-      echo ' <ul> ';
-      echo ' <li><a href="#hero">Accueil</a></li>';
-      echo ' <li><a href="#about">A propos</a></li>';
-      echo ' <li><a href="#menu">Menu</a></li>';
-      echo ' <li><a href="#events">Evénement</a></li>';
-      echo ' <li><a href="#gallery">Gallerie</a></li>';
-      echo ' <li><a href="#contact">Contact</a></li>';
-      echo ' <li><a href="./forms/profile.php">Profil</a></li>';
-      echo ' <li><a href="./forms/dashbordAdmin.php">Admin</a></li>';
-      echo ' <li><a href="./forms/logout.php">Déconnexion</a></li>';
+        echo ' <nav id="navbar" class="navbar">';
+        echo ' <ul> ';
+        echo ' <li><a href="#hero">Accueil</a></li>';
+        echo ' <li><a href="#about">A propos</a></li>';
+        echo ' <li><a href="#menu">Menu</a></li>';
+        echo ' <li><a href="#events">Evénement</a></li>';
+        echo ' <li><a href="#gallery">Gallerie</a></li>';
+        echo ' <li><a href="#contact">Contact</a></li>';
+        echo ' <li><a href="./forms/profile.php">Profil</a></li>';
+        echo ' <li><a href="./forms/dashbordAdmin.php">Admin</a></li>';
+        echo ' <li><a href="./forms/logout.php">Déconnexion</a></li>';
 
 
 
-      echo ' </ul>';
-      echo '</nav><!-- .navbar -->';
-
-      }   elseif (internauteEstConnecte())  {
+        echo ' </ul>';
+        echo '</nav><!-- .navbar -->';
+      } elseif (internauteEstConnecte()) {
 
         echo ' <nav id="navbar" class="navbar">';
         echo ' <ul> ';
@@ -82,8 +82,7 @@ require_once('./forms/init.inc.php')
         echo ' <li><a href="./forms/logout.php">Déconnexion</a></li>';
         echo ' </ul>';
         echo '</nav><!-- .navbar -->';
-
-      }  else {
+      } else {
 
         echo ' <nav id="navbar" class="navbar">';
         echo ' <ul> ';
@@ -93,15 +92,12 @@ require_once('./forms/init.inc.php')
         echo ' <li><a href="#events">Evénement</a></li>';
         echo ' <li><a href="#gallery">Gallerie</a></li>';
         echo ' <li><a href="#contact">Contact</a></li>';
-  
-        echo '  <li><a href="./forms/register.php">S inscrire</a></li>';
+
+        echo '  <li><a href="./forms/register.php">S\'inscrire</a></li>';
         echo '   <li><a href="./forms/login.php">Se connecter</a></li>';
-  
+
         echo ' </ul>';
         echo '</nav><!-- .navbar -->';
-
-
-
       }
 
       ?>
@@ -114,14 +110,14 @@ require_once('./forms/init.inc.php')
   <!-- ======= Hero Section ======= -->
 
   <?php
-$resultat_imageIndex = executeRequete1("SELECT image FROM recipe ORDER BY id_recipe desc");
+  $resultat_imageIndex = executeRequete1("SELECT image FROM recipe ORDER BY id_recipe desc");
 
-if ($resultat_imageIndex->num_rows > 0) {
+  if ($resultat_imageIndex->num_rows > 0) {
     $ligne = $resultat_imageIndex->fetch_assoc();
     $Image_index = $ligne['image']; ?>
 
-<?php }
-?>
+  <?php }
+  ?>
 
   <section id="hero" class="hero d-flex align-items-center section-bg">
     <div class="container">
@@ -135,7 +131,7 @@ if ($resultat_imageIndex->num_rows > 0) {
           </div>
         </div>
         <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-        <img src="<?php echo $Image_index; ?>" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+          <img src="<?php echo $Image_index; ?>" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
         </div>
       </div>
     </div>
@@ -223,54 +219,63 @@ if ($resultat_imageIndex->num_rows > 0) {
         </div>
       </div>
     </section><!-- End Why Us Section -->
-   
+
     <!-- ======= Menu Section ======= -->
     <section id="menu" class="menu">
 
-    <?php
 
 
+      <?php
 
-$resultat1 = executeRequete1("SELECT categorie_recipe.name ,  recipe.title  AS Plat, recipe.description AS Descrition, recipe.price AS 'Prix €', recipe.image AS image FROM recipe , categorie_recipe WHERE recipe.id_categorie_recipe = categorie_recipe.id_categorie_recipe");
+      $resultat1 = executeRequete1("SELECT categorie_recipe.name ,  recipe.title  AS Plat, recipe.description AS Descrition, recipe.price AS 'Prix €', recipe.image AS image FROM recipe , categorie_recipe WHERE recipe.id_categorie_recipe = categorie_recipe.id_categorie_recipe");
+
+      //$plat=$resultat1['recipe.title'];
+
+      ?>
 
 
+      <div class="why-box">
 
-?>
-<div class="why-box">
-<?php
-$contenu_plat .= '<h2 data-aos="fade-up"> Nos plats </h2>';
-?>
-<br>
-</div>
-<?php
-$contenu_plat .= '<table class="table""p id="profile" border="1"><tr>';
+        <?php
+        $contenu_plat .= '<h2 data-aos="fade-up"> Nos plats </h2>';
+        ?>
+        <br>
+      </div>
+      <div class="row">
 
-while ($colonne = $resultat1->fetch_field()) {
-  $contenu_plat .= '<th>' . $colonne->name . '</th>';
+        <?php
+
+
+// Récupération des données de la table "recipe"
+$resultat = executeRequete("SELECT title, description, price, image FROM recipe");
+
+// Initialisation de la variable contenant le contenu des cards
+$contenu_cards = '';
+
+// Parcours des résultats de la requête
+while ($recette = $resultat->fetch_assoc()) {
+
+    // Construction de la card pour chaque recette
+    $contenu_cards .= '<div class="card" style="width: 18rem;">';
+    $contenu_cards .= '<div class="card-body">';
+    $contenu_cards .= '<img class="card-img-top" src="'.$recette['image'].'" alt="Card image cap"  style="width:200px;height:150px" onclick="openImage()" style="cursor:pointer;">';
+    $contenu_cards .= '<h5 class="card-title">' . $recette['title'] . '</h5>';
+    $contenu_cards .= '<p class="card-text">' . $recette['description'] . '</p>';
+    $contenu_cards .= '<p class="card-text">' . $recette['price'] . ' €</p>';
+    $contenu_cards .= '</div>';
+    $contenu_cards .= '</div>';
 }
 
-//$contenu .= '<th>Modification</th>';
-$contenu_plat .= '</tr>';
-
-while ($ligne = $resultat1->fetch_assoc()) {
-  $contenu_plat .= '<tr>';
-  foreach ($ligne as $indice => $information) {
-    if ($indice == 'image') {
-      $contenu_plat .= '<td><img src="'. $information . '" width="500"></td>';
-    } else {
-      $contenu_plat .= '<td>' . $information . '</td>';
-    }
-  }
-  // ...
-}
-$contenu_plat .= '</table><br><hr><br>';
-
-echo $contenu_plat;
+// Affichage des cards
+echo $contenu_cards;
 ?>
-</div>
 
-ICI     
-    
+ICI
+      </div>
+
+
+
+
     </section><!-- End Menu Section -->
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
@@ -413,8 +418,8 @@ ICI
         </div>
       </div>
     </section><!-- End Events Section -->
-   
-    
+
+
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery section-bg">
       <div class="container" data-aos="fade-up">
@@ -583,5 +588,13 @@ ICI
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+function openImage() {
+  window.open("path/to/aa.jpg");
+}
+</script>
+
+</script>
 </body>
+
 </html>

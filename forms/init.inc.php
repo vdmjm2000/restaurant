@@ -14,11 +14,20 @@ $database = ltrim($dbparts['path'],'/');
 //--------- BDD
 $mysqli = new mysqli("localhost", "root", "", "restaurant");
 if ($mysqli->connect_error) die('Un problème est survenu lors de la tentative de connexion à la BDD : ' . $mysqli->connect_error);
-// $mysqli->set_charset("utf8");
- }
+ $mysqli->set_charset("utf8");
+}
+
+//else {
+
+ // $mysqli = new mysqli("localhost", "z95aoomu", "ml15p2]}4{y-", "z95aoomu_restaurant");
+//if ($mysqli->connect_error) die('Un problème est survenu lors de la tentative de connexion à la BDD : ' . $mysqli->connect_error);
+ //$mysqli->set_charset("utf8");
+//}
+
+ 
 
  // Définir la durée de validité à 1 heure (3600 secondes)
-session_set_cookie_params(3600);
+session_set_cookie_params(360);
 
 // Démarrer la session
 session_start();

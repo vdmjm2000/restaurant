@@ -34,12 +34,13 @@
           <h4>Affichage des horaires</h4>
           <p>
             <?php
-            $resultat2 = executeRequete("SELECT day, open_timeLunch, close_timeLunch, open_timeDinner, close_timeDinner FROM time_table");
+            $resultat2 = executeRequete("SELECT day, DATE_FORMAT(open_timeLunch,'%Hh%i'), DATE_FORMAT(close_timeLunch,'%Hh%i'), DATE_FORMAT(open_timeDinner,'%Hh%i'), DATE_FORMAT(close_timeDinner,'%Hh%i') FROM time_table");
 
             while ($ligne = $resultat2->fetch_assoc()) {
               foreach ($ligne as $indice => $information) { {
                  $contenu_footer .= ' ' . $information . ' - ';
                 }
+                
               }
             }
             echo $contenu_footer;

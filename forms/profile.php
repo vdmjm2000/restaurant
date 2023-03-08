@@ -11,9 +11,10 @@ if (!internauteEstConnecte()) header("location:login.php");
 
 
 //debug($_SESSION);
+$id = $_SESSION['user']['id'];
 
 
-$stmt = $mysqli->query("SELECT * FROM user, booking");
+$stmt = $mysqli->query("SELECT * FROM user, booking WHERE user.id = $id");
 $result = $stmt->fetch_assoc();
 
 $id = $_SESSION['user']['id'];

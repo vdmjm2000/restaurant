@@ -13,6 +13,7 @@ if (isset($_SESSION['user']['id']) && $_SESSION['user']['id'] == $_GET['id']) {
     // L'utilisateur est autorisé à accéder à cette page
 } else {
     session_destroy(); // détruire la session en cours
+
     header('login.php');
     echo 'Vous n avez pas les accés à cette page';
 

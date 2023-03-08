@@ -56,6 +56,7 @@ if($_POST)
 </div>
 
 <br> 
+<div class="login">
 <form class="form" method="post" action="">
     <label for="pseudo">Pseudo</label><br>
     <input type="text" id="pseudo" name="pseudo"><br> <br>
@@ -63,9 +64,9 @@ if($_POST)
     <label for="mdp">Mot de passe</label><br>
     <input type="password" id="mdp" name="mdp"><br><br>
  
-     <input type="submit" class="btn btn-outline-info" value="Se connecter">
+     <input type="submit" class="" value="Se connecter">
 </form>
-
+</div>
 <br>
 <br>
 <div class="form">

@@ -45,14 +45,11 @@ if($_POST)
 <br>
 <br>
 <div class="form">
-Vous avez un compte existant ? c'est par <a href="./login.php"> ici </a>
+Vous possédez déjà un compte ? <a href="./login.php">c'est par ici chef </a>
 </div>
 <br>
-<br>
-<br>
 
-
- <div class="form">
+ <div class="form register">
 <form method="post" action="">
 
     <label for="civilite">Civilité</label><br>
@@ -78,7 +75,7 @@ Vous avez un compte existant ? c'est par <a href="./login.php"> ici </a>
     <label for="adresse">Adresse</label><br>
     <textarea id="adresse" name="adresse" placeholder="votre dresse" pattern="[a-zA-Z0-9-_.]{5,15}" title="caractères acceptés :  a-zA-Z0-9-_."></textarea><br><br>
 
-    <label for="commentaire=">Commentaires</label><br>
+    <label for="commentaire=">Veuillez lister vos éventuelles allergies</label><br>
     <textarea type="textarea id="adresse" name="commentaire" placeholder="commentaire" title="250 caractères max  :  a-zA-Z0-9-_."></textarea><br><br>
 
     <label for="pseudo">Pseudo</label><br>

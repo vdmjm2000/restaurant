@@ -20,9 +20,30 @@
 }
 
 
-/*Horaires sur footer*/
+/*hour_select - affichage des heures proposées*/
+
+.selected {
+  background-color: black;
+  color: #fff;
+}
+
+/*Affichage login*/
+
+.login {
+width: 0 auto;
+height: 0 auto;
+background-color: #906427;
+margin: 0 auto;
+}
 
 
+.register {
+  width: 0 auto;
+  height: 0 auto;
+  background-color: #906427;
+  margin: 0 auto;
+  }
+  
 
 
 /* Fonts */
@@ -601,7 +622,7 @@ section {
   }
 
   .mobile-nav-show {
-    color: var(--color-secondary);
+    color: white;
     font-size: 28px;
     cursor: pointer;
     line-height: 0;

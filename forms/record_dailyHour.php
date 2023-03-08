@@ -1,25 +1,21 @@
 <?php
 
-//header("location:dashbordAdmin.php");
+header("location:dashbordAdmin.php");
 
 
 require_once("./init.inc.php");
+require_once("./head.php");
+
 
 //------------------------------ TRAITEMENTS PHP ---------------------------------//
 if(!internauteEstConnecte()) header("location:login.php");
 
 //--------------------------------- AFFICHAGE HTML ---------------------------------//
 
-if (internauteEstConnecteEtEstAdmin()) {
-    require_once("./headAdmin.php");
-}
-elseif (internauteEstConnecte()) {
-    require_once("./head.php");
-}
 
 if($_POST)
 {
-    debug($_POST);
+    //debug($_POST);
 
     foreach($_POST as $indice => $valeur)
     {
