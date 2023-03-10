@@ -114,9 +114,9 @@ require_once('./forms/init.inc.php')
 
   if ($resultat_imageIndex->num_rows > 0) {
     $ligne = $resultat_imageIndex->fetch_assoc();
-    $Image_index = $ligne['image']; ?>
+    $Image_index = $ligne['image'];
 
-  <?php }
+   }
   ?>
 
   <section id="hero" class="hero d-flex align-items-center section-bg">

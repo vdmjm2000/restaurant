@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vdmjm2000/restaurant/issues"
   },
-  "homepage": "https://github.com/vdmjm2000/restaurant#readme"
+  "homepage": "https://github.com/vdmjm2000/restaurant#readme",
+  "devDependencies": {
+    "cypress": "^12.7.0"
+  }
 }
