@@ -64,7 +64,7 @@ if($_POST)
     <label for="mdp">Mot de passe</label><br>
     <input type="password" id="mdp" name="mdp"><br><br>
  
-     <input type="submit" class="" value="Se connecter">
+     <input type="submit" id="submit_login" value="Se connecter">
 </form>
 </div>
 <br>

@@ -1,12 +1,12 @@
 describe("template spec", () => {
   it("selection authentification", () => {
-    cy.visit("http://localhost/restaurant/index.php");
+    cy.visit("https://vdmjm.com/");
     cy.get(".container > .btn-book-a-table").click();
     cy.get("#pseudo").click({ force: true });
     cy.get("#pseudo").type("pp");
     cy.get("#mdp").click({ force: true });
     cy.get("#mdp").type("mm");
-    cy.get('[type="submit"]').click();
+    cy.get('#submit_login').click({ force: true });
 
   });
 });
