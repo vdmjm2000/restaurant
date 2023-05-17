@@ -21,7 +21,7 @@ $id = $_SESSION['user']['id'];
 
 $contenu .= '<form action="update.php" method="get">';
 //$contenu .= '<p class="centre">id <strong>' . $_SESSION['user']['id'] . '</strong></p>';
-$contenu .= '<p class="centre">Bonjour <strong>' . $result['prenom'] . '</strong></p>';
+$contenu .= '<p class="centre">Bonjour <strong>' . $result['prenom'] .' '. $result['nom'] .' </strong></p>';
 $contenu .= '<div class="cadre"><h2> Voici vos informations </h2>';
 $contenu .= 'votre email est: ' . $result['email'] . '<br>';
 $contenu .= 'votre téléphone est: ' . $result['tel'] . '<br>';

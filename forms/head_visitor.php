@@ -56,8 +56,8 @@
         <ul>
           <li><a href="#hero">Accueil</a></li>
           <li><a href="#about">A propos</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#events">Evénement</a></li>
+          <li><a href="#menu">Plats</a></li>
+          <li><a href="#events">Menus</a></li>
           <li><a href="./profile.php">Profil</a></li>
           <li><a href="./dashbordAdmin.php">Admin</a></li>
           <li><a href="./logout.php">Déconnexion</a></li>

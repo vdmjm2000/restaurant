@@ -389,6 +389,74 @@ section {
   scroll-margin-top: 90px;
 }
 
+
+/*--------------------------------------------------------------
+# menu section
+--------------------------------------------------------------*/
+
+.events {
+
+  background-color: #b6ac97;
+
+
+}
+
+.image-container {
+  position: relative;
+}
+
+
+.text-menu-name {
+  position: absolute;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: gray;
+  top: 40%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.text-menu-price {
+  position: absolute;
+  color: gray;
+  top: 55%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.text-menu-recipe1 {
+  position: absolute;
+  top: 65%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.text-menu-recipe2 {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.text-menu-recipe3 {
+  position: absolute;
+  top: 85%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/

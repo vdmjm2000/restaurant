@@ -11,13 +11,29 @@ if(!internauteEstConnecte()) header("location:login.php");
 require_once("./head.php");
 
 
+//connexion à la table 
 
-// récupération des données de la session en cours//
+$id=$_SESSION['user']['id'];
 
-$id = $_SESSION['user']['id'];
-$nom = $_SESSION['user']['nom'];
-$email = $_SESSION['user']['email'];
-$tel = $_SESSION['user']['tel'];
+$stmt = $mysqli->query("SELECT * FROM user where id= $id");
+$result = $stmt->fetch_assoc();
+
+
+// Affectation de la valeur à un champ
+$id = $result['id'];
+$nom = $result['nom'];
+$prenom = $result['prenom'];
+$email = $result['email'];
+$tel = $result['tel'];
+$adresse = $result['adresse'];
+$ville = $result['ville'];
+$cp = $result['cp'];
+$commentaire = $result['commentaire'];
+$mdp = $result['mdp'];
+
+
+
+
 
 
 

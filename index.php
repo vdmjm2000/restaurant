@@ -12,7 +12,7 @@ require_once('./forms/init.inc.php')
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Chez JeanMi</title>
+  <title>Le Quai Antique</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
@@ -36,6 +36,8 @@ require_once('./forms/init.inc.php')
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  
 </head>
 
 <body>
@@ -45,7 +47,6 @@ require_once('./forms/init.inc.php')
       <a href="index.php" class="logo d-flex align-items-center me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="./images/logo.jpg" alt="" width="60px" height="60px">
-        <!--<h1>Chef Jeanmich<span>.</span></h1> -->
       </a>
 
       <?php
@@ -56,9 +57,8 @@ require_once('./forms/init.inc.php')
         echo ' <ul> ';
         echo ' <li><a href="#hero">Accueil</a></li>';
         echo ' <li><a href="#about">A propos</a></li>';
-        echo ' <li><a href="#menu">Menu</a></li>';
-        echo ' <li><a href="#events">Evénement</a></li>';
-        echo ' <li><a href="#gallery">Gallerie</a></li>';
+        echo ' <li><a href="#menu">Plats</a></li>';
+        echo ' <li><a href="#events">Menus</a></li>';
         echo ' <li><a href="#contact">Contact</a></li>';
         echo ' <li><a href="./forms/profile.php">Profil</a></li>';
         echo ' <li><a href="./forms/dashbordAdmin.php">Admin</a></li>';
@@ -74,9 +74,8 @@ require_once('./forms/init.inc.php')
         echo ' <ul> ';
         echo ' <li><a href="#hero">Accueil</a></li>';
         echo ' <li><a href="#about">A propos</a></li>';
-        echo ' <li><a href="#menu">Menu</a></li>';
-        echo ' <li><a href="#events">Evénement</a></li>';
-        echo ' <li><a href="#gallery">Gallerie</a></li>';
+        echo ' <li><a href="#menu">Plats</a></li>';
+        echo ' <li><a href="#events">Menus</a></li>';
         echo ' <li><a href="#contact">Contact</a></li>';
         echo ' <li><a href="./forms/profile.php">Profil</a></li>';
         echo ' <li><a href="./forms/logout.php">Déconnexion</a></li>';
@@ -88,9 +87,8 @@ require_once('./forms/init.inc.php')
         echo ' <ul> ';
         echo ' <li><a href="#hero">Accueil</a></li>';
         echo ' <li><a href="#about">A propos</a></li>';
-        echo ' <li><a href="#menu">Menu</a></li>';
-        echo ' <li><a href="#events">Evénement</a></li>';
-        echo ' <li><a href="#gallery">Gallerie</a></li>';
+        echo ' <li><a href="#menu">Plats</a></li>';
+        echo ' <li><a href="#events">Menus</a></li>';
         echo ' <li><a href="#contact">Contact</a></li>';
 
         echo '  <li><a href="./forms/register.php">S\'inscrire</a></li>';
@@ -115,8 +113,7 @@ require_once('./forms/init.inc.php')
   if ($resultat_imageIndex->num_rows > 0) {
     $ligne = $resultat_imageIndex->fetch_assoc();
     $Image_index = $ligne['image'];
-
-   }
+  }
   ?>
 
   <section id="hero" class="hero d-flex align-items-center section-bg">
@@ -124,7 +121,7 @@ require_once('./forms/init.inc.php')
       <div class="row justify-content-between gy-5">
         <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
           <h2 data-aos="fade-up">Venez apprécier<br>Nos délicieux plats</h2>
-          <p data-aos="fade-up" data-aos-delay="100">Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+          <p data-aos="fade-up" data-aos-delay="100">Venez découvrir nos spécialités</p>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
             <a href="./forms/booking.php" class="btn-book-a-table">Réservez une table</a>
             <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Voir nos plats</span></a>
@@ -141,8 +138,8 @@ require_once('./forms/init.inc.php')
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>About Us</h2>
-          <p>Learn More <span>About Us</span></p>
+          <h2>A propos de nous</h2>
+          <p>Découvrir <span>qui nous sommes</span></p>
         </div>
         <div class="row gy-4">
           <div class="col-lg-7 position-relative about-img" style="background-image: url(assets/img/about.jpg) ;" data-aos="fade-up" data-aos-delay="150">
@@ -154,18 +151,17 @@ require_once('./forms/init.inc.php')
           <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
             <div class="content ps-0 ps-lg-5">
               <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                Notre restaurant vous offre une expérience culinaire inoubliable, avec une ambiance chaleureuse et conviviale. Nous mettons à votre disposition une sélection variée de plats savoureux, préparés avec des ingrédients frais et de qualité.
+                <br>
+                Notre menu propose des options pour tous les goûts, des entrées alléchantes aux desserts délicieux.
+                <br>
+                Nos chefs talentueux utilisent des techniques innovantes pour créer des plats qui sont à la fois esthétiquement beaux et délicieux.
+                <br>
+                Nous sommes fiers de proposer des plats végétariens et végétaliens qui raviront tous les convives. Vous pourrez également accompagner vos plats avec notre sélection de vins de qualité supérieure.
+                <br>
+                Notre équipe de service amicale et attentionnée est à votre disposition pour vous guider tout au long de votre repas et pour répondre à tous vos besoins. Nous sommes ouverts pour le déjeuner et le dîner, du lundi au samedi, et nous serions ravis de vous accueillir pour une expérience culinaire mémorable.
               </p>
-              <ul>
-                <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-              </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-              </p>
+
               <div class="position-relative mt-4">
                 <img src="assets/img/about-2.jpg" class="img-fluid" alt="">
                 <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
@@ -181,37 +177,35 @@ require_once('./forms/init.inc.php')
         <div class="row gy-4">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="why-box">
-              <h3>Pourquoi choisir Chef Jeanmi.</h3>
+              <h3>Pourquoi choisir Le quai antique</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                Nous sommes convaincus que vous serez enchanté(e) par notre restaurant, où notre équipe attentionnée est à votre disposition pour vous offrir un service exceptionnel et vous guider dans le choix de vos plats.
+                <br>
+                Venez découvrir notre menu varié, qui propose des options pour tous les goûts, et laissez-nous vous offrir une expérience culinaire mémorable.
               </p>
-              <div class="text-center">
-                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-              </div>
-            </div>
+          </div>
           </div><!-- End Why Box -->
           <div class="col-lg-8 d-flex align-items-center">
             <div class="row gy-4">
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-clipboard-data"></i>
-                  <h4>Corporis voluptates officia eiusmod</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  <i class="bi bi-egg"></i>
+                  <h4>Qualité</h4>
+                  <p>nous mettons un point d'honneur à privilégier la qualité et l'authenticité. Chaque bouchée que vous dégusterez est le fruit d'un travail minutieux, réalisé avec passion par nos chefs talentueux.</p>
                 </div>
               </div><!-- End Icon Box -->
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-gem"></i>
-                  <h4>Ullamco laboris ladore pan</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  <i class="bi bi-egg-fill"></i>
+                  <h4>Artisanat</h4>
+                  <p>Nous comprenons que la satisfaction des sens est essentielle pour une expérience culinaire réussie. C'est pourquoi notre menu est élaboré avec soin, en combinant des saveurs délicates et des présentations artistiques.</p>
                 </div>
               </div><!-- End Icon Box -->
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-inboxes"></i>
-                  <h4>Labore consequatur incidid dolore</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  <i class="bi bi-egg-fried"></i>
+                  <h4>Fraicheur</h4>
+                  <p>Nous croyons fermement que la bonne cuisine est synonyme de bonheur. Nous vous invitons à découvrir les plaisirs gustatifs que nous avons à offrir, à vous laisser emporter par les saveurs exquises et les textures raffinées.</p>
                 </div>
               </div><!-- End Icon Box -->
             </div>
@@ -246,219 +240,103 @@ require_once('./forms/init.inc.php')
         <?php
 
 
-// Récupération des données de la table "recipe"
-$resultat = executeRequete("SELECT title, description, price, image FROM recipe");
+        // Récupération des données de la table "recipe"
+        $resultat = executeRequete("SELECT title, description, price, image FROM recipe");
 
-// Initialisation de la variable contenant le contenu des cards
-$contenu_cards = '';
+        // Initialisation de la variable contenant le contenu des cards
+        $contenu_cards = '';
 
-// Parcours des résultats de la requête
-while ($recette = $resultat->fetch_assoc()) {
+        // Parcours des résultats de la requête
+        while ($recette = $resultat->fetch_assoc()) {
 
-    // Construction de la card pour chaque recette
-    $contenu_cards .= '<div class="card" style="width: 18rem;">';
-    $contenu_cards .= '<div class="card-body">';
-    $contenu_cards .= '<img class="card-img-top" src="'.$recette['image'].'" alt="Card image cap"  style="width:200px;height:150px" onclick="openImage()" style="cursor:pointer;">';
-    $contenu_cards .= '<h5 class="card-title">' . $recette['title'] . '</h5>';
-    $contenu_cards .= '<p class="card-text">' . $recette['description'] . '</p>';
-    $contenu_cards .= '<p class="card-text">' . $recette['price'] . ' €</p>';
-    $contenu_cards .= '</div>';
-    $contenu_cards .= '</div>';
-}
+          // Construction de la card pour chaque recette
+          $contenu_cards .= '<div class="" style="width: 18rem;">';
+          $contenu_cards .= '<div class="card-body">';
+          $contenu_cards .= '<img class="card-img-top" src="' . $recette['image'] . '" alt="Card image cap"  style="width:200px;height:150px" onclick="openImage()" style="cursor:pointer;">';
+          $contenu_cards .= '<h5 class="card-title">' . $recette['title'] . '</h5>';
+          $contenu_cards .= '<p class="card-text">' . $recette['description'] . '</p>';
+          $contenu_cards .= '<p class="card-text">' . $recette['price'] . ' €</p>';
+          $contenu_cards .= '</div>';
+          $contenu_cards .= '</div>';
+        }
 
-// Affichage des cards
-echo $contenu_cards;
-?>
+        // Affichage des cards
+        echo $contenu_cards;
+        ?>
 
-ICI
+  
       </div>
-
-
-
-
     </section><!-- End Menu Section -->
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Testimonials</h2>
-          <p>What Are They <span>Saying About Us</span></p>
-        </div>
-        <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Saul Goodman</h3>
-                      <h4>Ceo &amp; Founder</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Sara Wilsson</h3>
-                      <h4>Designer</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Jena Karlis</h3>
-                      <h4>Store Owner</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>John Larson</h3>
-                      <h4>Entrepreneur</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-4.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section><!-- End Testimonials Section -->
     <!-- ======= Events Section ======= -->
-    <section id="events" class="events">
-      <div class="container-fluid" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Evènements</h2>
-          <p>Partagez<span> Vos Moments</span> Dans notre Restaurant</p>
-        </div>
-        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-1.jpg)">
-              <h3>Custom Parties</h3>
-              <div class="price align-self-start">$99</div>
-              <p class="description">
-                Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.
-              </p>
-            </div><!-- End Event item -->
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-2.jpg)">
-              <h3>Private Parties</h3>
-              <div class="price align-self-start">$289</div>
-              <p class="description">
-                In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur.
-              </p>
-            </div><!-- End Event item -->
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-3.jpg)">
-              <h3>Birthday Parties</h3>
-              <div class="price align-self-start">$499</div>
-              <p class="description">
-                Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
-              </p>
-            </div><!-- End Event item -->
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section><!-- End Events Section -->
+    <?php
+
+    // Vérifier la connexion
+    if ($mysqli->connect_error) {
+      die("Connection failed: " . $mysqli->connect_error);
+    }
+
+    // Récupérer les données de la table de menu
+    $sql = "SELECT * FROM menu";
+    $result = $mysqli->query($sql);
+
+    if ($result->num_rows > 0) {
+      // Afficher les menus dans la section HTML
+      echo '<section id="events" class="events section-bg">';
+      echo '<div class="container-fluid" data-aos="fade-up">';
+      echo '<div class="section-header">';
+      echo '<p>Partagez<span> Vos Moments</span> Dans notre Restaurant';
+      echo '<br>';
+      echo '<span> Avec nos Menus Maison</span></p>';
+      echo '</div>';
+      echo '<div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">';
+      echo '<div class="swiper-wrapper">';
+      while($row = $result->fetch_assoc()) {
+        echo '<div class="swiper-slide event-item d-flex flex-column justify-content-start" style="background-image: url(./images/visuel-menu.jpg)">';
+        echo '<div class="text-container">';
+        echo '<div class="text-menu-name"><h2><u>'.$row["menu_name"].'</u></h2></div>';
+        echo '<br>';
+        echo '<div class="text-menu-price"><h3>'.$row["price"].' €</h3></div>';
+        echo '<div class="text-menu-recipe1"><h3>'.$row["recipe1"].'</h3></div>';
+        echo '<br>';
+        echo '<div class="text-menu-recipe2"><h3>'.$row["recipe2"].'</h3></div>';
+        echo '<br>';
+        echo '<div class="text-menu-recipe3"><h3>'.$row["recipe3"].'</h3></div>';
+        echo '</div>';
+        echo '</div>';
+      }
+      echo '</div>';
+      echo '<div class="swiper-pagination"></div>';
+      echo '</div>';
+      echo '</div>';
+      echo '</section>';
+      
+  } else {
+      echo "0 results";
+  }
+  $mysqli->close();
+  
+    ?>
 
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>gallery</h2>
-          <p>Check <span>Our Gallery</span></p>
-        </div>
-        <div class="gallery-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-3.jpg"><img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-4.jpg"><img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-5.jpg"><img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-6.jpg"><img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-7.jpg"><img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-8.jpg"><img src="assets/img/gallery/gallery-8.jpg" class="img-fluid" alt=""></a></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section><!-- End Gallery Section -->
+
+    
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Contact</h2>
-          <p>Need Help? <span>Contact Us</span></p>
+          <p>Besoin d'aide ? <span>Contactez-nous</span></p>
         </div>
         <div class="mb-3">
-          <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+          <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46242.904109597264!2d3.7420683!3d43.581935550000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6ad59d1e6a48f%3A0xa8d7d5b3717cd39f!2s5%20Rue%20Cl%C3%A9ment%20Ader%2C%2034570%20Pignan!5e0!3m2!1sfr!2sfr!4v1681721584570!5m2!1sfr!2sfr" frameborder="0" allowfullscreen></iframe>
         </div><!-- End Google Maps -->
         <div class="row gy-4">
           <div class="col-md-6">
             <div class="info-item  d-flex align-items-center">
               <i class="icon bi bi-map flex-shrink-0"></i>
               <div>
-                <h3>Our Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <h3>Notre adresse</h3>
+                <p> Rue clément Ader, 34570 Pignan</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -466,7 +344,7 @@ ICI
             <div class="info-item d-flex align-items-center">
               <i class="icon bi bi-envelope flex-shrink-0"></i>
               <div>
-                <h3>Email Us</h3>
+                <h3>Email</h3>
                 <p>contact@example.com</p>
               </div>
             </div>
@@ -475,8 +353,8 @@ ICI
             <div class="info-item  d-flex align-items-center">
               <i class="icon bi bi-telephone flex-shrink-0"></i>
               <div>
-                <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <h3>Appelez-nous</h3>
+                <p>+33 (0)467676767</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -484,39 +362,14 @@ ICI
             <div class="info-item  d-flex align-items-center">
               <i class="icon bi bi-share flex-shrink-0"></i>
               <div>
-                <h3>Opening Hours</h3>
-                <div><strong>Mon-Sat:</strong> 11AM - 23PM;
-                  <strong>Sunday:</strong> Closed
+                <h3>Heure d'ouverture</h3>
+                <div><strong>Lun-Dim:</strong> 11h - 23h;
                 </div>
               </div>
             </div>
           </div><!-- End Info Item -->
         </div>
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form p-3 p-md-4">
-          <div class="row">
-            <div class="col-xl-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="col-xl-6 form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-          </div>
-          <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
-        <!--End Contact Form -->
-      </div>
-    </section><!-- End Contact Section -->
+         
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -525,35 +378,27 @@ ICI
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-geo-alt icon"></i>
           <div>
-            <h4>Address</h4>
+            <h4>Adresse</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022 - US<br>
+              5 Rue Clément Ader <br>
+              34570 Pignan<br>
             </p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 footer-links d-flex">
           <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Reservations</h4>
-            <p>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-        </div>
+             </div>
         <div class="col-lg-3 col-md-6 footer-links d-flex">
           <i class="bi bi-clock icon"></i>
           <div>
-            <h4>Opening Hours</h4>
+            <h4>Horaires</h4>
             <p>
-              <strong>Mon-Sat: 11AM</strong> - 23PM<br>
-              Sunday: Closed
+              <strong>Lun-Dim: 11H</strong> - 23H<br>
             </p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Follow Us</h4>
+          <h4>Réseaux sociaux</h4>
           <div class="social-links d-flex">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -589,12 +434,12 @@ ICI
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-function openImage() {
-  window.open("path/to/aa.jpg");
-}
-</script>
+    function openImage() {
+      window.open("path/to/aa.jpg");
+    }
+  </script>
 
-</script>
+  </script>
 </body>
 
 </html>

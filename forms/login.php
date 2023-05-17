@@ -15,8 +15,8 @@ require_once("./head.php");
 //--------------------------------- TRAITEMENTS PHP ---------------------------------//
 if($_POST)
 {
-    // $contenu .=  "pseudo : " . $_POST['pseudo'] . "<br>mdp : " .  $_POST['mdp'] . "";
-    $resultat = executeRequete("SELECT * FROM user WHERE pseudo='$_POST[pseudo]'");
+     $contenu .=  "email : " . $_POST['email'] . "<br>mdp : " .  $_POST['mdp'] . "";
+    $resultat = executeRequete("SELECT * FROM user WHERE email='$_POST[email]'");
     if($resultat->num_rows != 0)
     {
         // $contenu .=  '<div style="background:green">pseudo connu!</div>';
@@ -42,7 +42,7 @@ if($_POST)
     }
     else
     {
-        $contenu .= '<div class="erreur">Erreur de pseudo</div>';
+        $contenu .= '<div class="erreur">Erreur d\'e-mail</div>';
     }
 }
 
@@ -58,11 +58,12 @@ if($_POST)
 <br> 
 <div class="login">
 <form class="form" method="post" action="">
-    <label for="pseudo">Pseudo</label><br>
-    <input type="text" id="pseudo" name="pseudo"><br> <br>
-         
+    <label for="pseudo">E-mail</label><br>
+    <input type="email" name="email" placeholder="Adresse e-mail" required>
+    <br>
+    <br>         
     <label for="mdp">Mot de passe</label><br>
-    <input type="password" id="mdp" name="mdp"><br><br>
+    <input type="password" id="mdp" name="mdp" placeholder="Mot de passe"><br><br>
  
      <input type="submit" id="submit_login" value="Se connecter">
 </form>

@@ -92,8 +92,8 @@
        echo ' <ul> ';
        echo ' <li><a href="#hero">Accueil</a></li>';
        echo ' <li><a href="#about">A propos</a></li>';
-       echo ' <li><a href="#menu">Menu</a></li>';
-       echo ' <li><a href="#events">Evénement</a></li>';
+       echo ' <li><a href="#menu">Plats</a></li>';
+       echo ' <li><a href="#events">Menus</a></li>';
        echo ' <li><a href="#gallery">Gallerie</a></li>';
        echo ' <li><a href="#contact">Contact</a></li>';
        echo '  <li><a href="./register.php">S\'inscrire</a></li>';

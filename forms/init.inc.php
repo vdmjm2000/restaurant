@@ -12,17 +12,17 @@ $database = ltrim($dbparts['path'],'/');
 
 
 //--------- BDD
-$mysqli = new mysqli("localhost", "root", "", "restaurant");
-if ($mysqli->connect_error) die('Un problème est survenu lors de la tentative de connexion à la BDD : ' . $mysqli->connect_error);
- $mysqli->set_charset("utf8");
-}
+//$mysqli = new mysqli("localhost", "root", "", "restaurant");
+//if ($mysqli->connect_error) die('Un problème est survenu lors de la tentative de connexion à la BDD : ' . $mysqli->connect_error);
+// $mysqli->set_charset("utf8");
+//}
 
 //else {
 
- // $mysqli = new mysqli("localhost", "z95aoomu", "ml15p2]}4{y-", "z95aoomu_restaurant");
-//if ($mysqli->connect_error) die('Un problème est survenu lors de la tentative de connexion à la BDD : ' . $mysqli->connect_error);
- //$mysqli->set_charset("utf8");
-//}
+  $mysqli = new mysqli("localhost", "z95aoomu", "ml15p2]}4{y-", "z95aoomu_restaurant");
+if ($mysqli->connect_error) die('Un problème est survenu lors de la tentative de connexion à la BDD : ' . $mysqli->connect_error);
+ $mysqli->set_charset("utf8");
+}
 
  
 
@@ -44,6 +44,8 @@ $contenu_footer = '';
 $contenu_reservation = '';
 $contenu_plat = '';
 $contenu_heures = '';
+$contenu_menu = '';
+
 
  
 //--------- AUTRES INCLUSIONS

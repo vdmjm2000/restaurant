@@ -60,7 +60,6 @@ $adresse = $result['adresse'];
 $ville = $result['ville'];
 $cp = $result['cp'];
 $commentaire = $result['commentaire'];
-$pseudo = $result['pseudo'];
 $mdp = $result['mdp'];
 //var_dump($adresse);
 
@@ -82,11 +81,12 @@ $mdp = $result['mdp'];
         <br>
         <br>
 
-        <label for="nom">Nom</label><br>
-        <input type="text" id="nom" name="nom" placeholder="votre nom" value="<?php echo ($nom) ?>"><br><br>
 
         <label for="prenom">Prénom</label><br>
         <input type="text" id="prenom" name="prenom" placeholder="votre prénom" value="<?php echo ($prenom) ?>"><br><br>
+
+        <label for="nom">Nom</label><br>
+        <input type="text" id="nom" name="nom" placeholder="votre nom" value="<?php echo ($nom) ?>"><br><br>
 
         <label for="email">Email</label><br>
         <input type="e4mail" id="email" name="email" placeholder="exemple@gmail.com" value="<?php echo ($email) ?>"><br><br>
@@ -95,7 +95,7 @@ $mdp = $result['mdp'];
         <input type="e4mail" id="tel" name="tel" placeholder="Votre tel" value="<?php echo ($tel) ?>"><br><br>
 
         <label for="ville">Ville</label><br>
-        <input type="text" id="ville" name="ville" placeholder="votre ville" pattern="[a-zA-Z0-9-_.]{5,15}" title="caractères acceptés : a-zA-Z0-9-_." value="<?php echo ($ville) ?>"><br><br>
+        <input type="text" id="ville" name="ville" placeholder="votre ville" pattern="[a-zA-Z0-9-_.]{1,15}" title="caractères acceptés : a-zA-Z0-9-_." value="<?php echo ($ville) ?>"><br><br>
 
         <label for="cp">Code Postal</label><br>
         <input type="text" id="cp" name="cp" placeholder="code postal" pattern="[0-9]{5}" title="5 chiffres requis : 0-9" value="<?php echo ($cp) ?>"><br><br>
@@ -105,9 +105,6 @@ $mdp = $result['mdp'];
 
         <label for="commentaire=">Commentaires</label><br>
         <input type="text"  id="commentaire" name="commentaire" placeholder="commentaire" title="250 caractères max  :  a-zA-Z0-9-_." value="<?php echo ($commentaire) ?>"></textarea><br><br>
-
-        <label for="pseudo">Pseudo</label><br>
-        <input type="text" id="pseudo" name="pseudo" disabled="disabled"  maxlength="20" placeholder="votre pseudo" pattern="[a-zA-Z0-9-_.]{1,20}" title="caractères acceptés : a-zA-Z0-9-_." required="required" value="<?php echo ($pseudo) ?>"><br><br>
 
         <!---<label for="mdp">Mot de passe</label><br>
         <input type="password" id="mdp" name="mdp" required="required" value="<?php echo ($mdp) ?>"><br><br>-->

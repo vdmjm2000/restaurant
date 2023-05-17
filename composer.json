@@ -1,0 +1,18 @@
+{
+    "name": "vdmjm/restaurant",
+    "autoload": {
+        "psr-4": {
+            "Vdmjm\\Restaurant\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "vdmjm2000",
+            "email": "101363734+vdmjm2000@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "symfony/webapp-pack": "^1.1",
+        "symfony/mailer": "^6.2"
+    }
+}
