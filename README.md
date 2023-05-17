@@ -1,4 +1,4 @@
-# Nom du Projet
+# Site en PHP restaurant "Le Quai Antique"
 
 Projet de site Web pour un restaurant en PHP avec une base de données MySQL.
 
