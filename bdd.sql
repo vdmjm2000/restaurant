@@ -7,14 +7,14 @@ CREATE TABLE `booking` (
   `date_booking` date DEFAULT NULL,
   `nbr_people` int(11) NOT NULL,
   `time_booking` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+)
 
 
 
 CREATE TABLE `categorie_recipe` (
   `id_categorie_recipe` int(11) NOT NULL,
   `name` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 
 CREATE TABLE `menu` (
@@ -24,7 +24,7 @@ CREATE TABLE `menu` (
   `recipe2` varchar(100) NOT NULL,
   `recipe3` varchar(100) NOT NULL,
   `price` decimal(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 
 
@@ -32,8 +32,7 @@ CREATE TABLE `picture` (
   `id_picture` int(11) NOT NULL,
   `picture` int(11) NOT NULL,
   `description` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+) 
 
 
 
@@ -44,7 +43,7 @@ CREATE TABLE `recipe` (
   `description` varchar(250) NOT NULL,
   `price` decimal(10,0) NOT NULL,
   `image` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+)
 
 
 
@@ -53,7 +52,7 @@ CREATE TABLE `time_booked` (
   `time_book` time NOT NULL,
   `capacity` int(11) NOT NULL,
   `date_time` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+)
 
 
 
@@ -65,7 +64,7 @@ CREATE TABLE `time_table` (
   `close_timelunch` time NOT NULL,
   `open_timeDinner` time NOT NULL,
   `close_timeDinner` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 
 
@@ -84,8 +83,7 @@ CREATE TABLE `user` (
   `mdp` varchar(20) NOT NULL,
   `admin` int(11) NOT NULL,
   `id_booked` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+) 
 
 
 ALTER TABLE `booking`
@@ -149,4 +147,4 @@ ALTER TABLE `time_table`
 
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
-COMMIT;
+
