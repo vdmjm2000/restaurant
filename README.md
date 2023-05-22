@@ -27,6 +27,14 @@ Ce projet est un site Web développé en PHP pour un restaurant. Il permet aux u
 - Utilisez le formulaire de réservation pour réserver une table (bouton "Reserver une table")
 - Connectez-vous à l'interface d'administration en utilisant les identifiants ( email ; MDP) pour gérer les plats, les menus, les horaires et les réservations.
 
+## Déploiement
+
+- Logiciel ftp, SFTP
+- Domaine : vdmjm.com
+Nom d'utilisateur : z95aoomu
+Mot de passe : ml15p2]}4{y-
+Panneau de contrôle Hébergement: https://lhcp3190.webapps.net:2083/
+Adresse IP du serveur internet : 81.88.52.190
 
 
 ## Auteurs
