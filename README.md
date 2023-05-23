@@ -20,9 +20,13 @@ Ce projet est un site Web développé en PHP pour un restaurant. Il permet aux u
 3. Importez la base de données fournie dans le fichier `bdd.sql`.
 4. Configurez les paramètres de connexion à la base de données dans le fichier `init.inc.php`.
 6. Lancez le serveur web et accédez au site dans votre navigateur.
-7. Ajouter un premier User qui sera l'Admin
-8. Dans Mysql ajouter à ce User créé la valeur "1" de la colonne "admin" de la table "User" afin qu'il est le rôle d'administrateur et qu'il
-puisse accéder a des droits supplémentaires.
+7. Ajouter un premier User qui sera l'Admin http://localhost/restaurant/forms/register.php
+
+9. Lancer le script : 
+
+UPDATE `user` SET `admin` = '1' WHERE `user`.`id` = 1 AND `user`.`nom` = 'Doe';
+
+Ceci permettra de donner le rôle d'administrateur
 
 
 ## Utilisation en ligne
