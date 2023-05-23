@@ -17,9 +17,9 @@ Ce projet est un site Web développé en PHP pour un restaurant. Il permet aux u
 
 1. Assurez-vous d'avoir PHP et MySQL installés sur votre système.
 2. Clonez ce dépôt dans votre répertoire de serveur web. (https://github.com/vdmjm2000/restaurant.git)
-3. Importez la base de données fournie dans le fichier `bdd.sql`.
+3. Importez la base de données fournie dans le fichier `bdd.sql` (  Création des tables + ajout du user Admin).
 4. Configurez les paramètres de connexion à la base de données dans le fichier `init.inc.php`.
-5. Lancez le serveur web et accédez au site dans votre navigateur.
+6. Lancez le serveur web et accédez au site dans votre navigateur.
 
 ## Utilisation en ligne
 
