@@ -58,7 +58,7 @@
    <div class="container d-flex align-items-center justify-content-between">
      <a href="../index.php" class="logo d-flex align-items-center me-auto me-lg-0">
        <!-- Uncomment the line below if you also wish to use an image logo -->
-      <img src="../images/logo.jpg" alt="" width="60px" height="60px">
+       <img src="../images/logo.jpg" alt="" width="120" height="80px">
       <!-- <h1>Chef Jeanmich<span>.</span></h1>-->
      </a>
 

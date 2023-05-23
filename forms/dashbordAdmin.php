@@ -244,41 +244,7 @@ if (!internauteEstConnecteEtEstAdmin()) header("location:login.php");
                     echo "<option value='" . $row['title'] . "'>" . $row['title'] . "</option>";
                   }
                   ?>
-                </select><br>
-
-                
-                <label for="recipe3">Recette 4 :</label>
-                <select id="recipe3" name="recipe3">
-                <?php
-                
-                  $resultat = executeRequete("SELECT title from recipe");
-                  // Affichage des options de la liste déroulante
-                  while ($row = mysqli_fetch_assoc($resultat)) {
-                    echo "<option value='" . $row['title'] . "'>" . $row['title'] . "</option>";
-                  }
-                  ?>
-                </select><br>
-
-                <label for="recipe2">Recette 5 :</label>
-                <select id="recipe2" name="recipe2">
-                  <?php
-                  $resultat = executeRequete("SELECT title from recipe");
-                  // Affichage des options de la liste déroulante
-                  while ($row = mysqli_fetch_assoc($resultat)) {
-                    echo "<option value='" . $row['title'] . "'>" . $row['title'] . "</option>";
-                  }
-                  ?>
-                </select><br>
-
-                <label for="recipe3">Recette 6 :</label>
-                <select id="recipe3" name="recipe3">
-                  <?php
-                  $resultat = executeRequete("SELECT title from recipe");
-                  // Affichage des options de la liste déroulante
-                  while ($row = mysqli_fetch_assoc($resultat)) {
-                    echo "<option value='" . $row['title'] . "'>" . $row['title'] . "</option>";
-                  }
-                  ?>
+            
                 </select><br>
 
                 <label for="price">Prix :</label>

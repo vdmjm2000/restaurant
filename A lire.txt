@@ -1,0 +1,3 @@
+Lien Github  https://github.com/vdmjm2000/restaurant.git
+Lien site en ligne https://www.vdmjm.com
+Jira https://vdmjm.atlassian.net/jira/software/projects/ECF

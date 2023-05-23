@@ -26,13 +26,14 @@ if($_POST)
         }
         else
         {
-            // $_POST['mdp'] = md5($_POST['mdp']);
+           
+            $_POST['mdp'] =  password_hash($_POST['mdp'], PASSWORD_BCRYPT);
             foreach($_POST as $indice => $valeur)
             {
                 $_POST[$indice] = htmlEntities(addSlashes($valeur));
             }
             executeRequete("INSERT INTO user (civilite,nom, prenom, email,ville,cp,adresse,commentaire,mdp) VALUES ('$_POST[civilite]', '$_POST[nom]', '$_POST[prenom]', '$_POST[email]', '$_POST[ville]','$_POST[cp]', '$_POST[adresse]', '$_POST[commentaire]','$_POST[mdp]')");
-            $contenu .= "<div>Vous êtes inscrit à notre site web. <a href=\"login.php\"><u>Cliquez ici pour vous connecter</u></a></div>";
+            $contenu .= "<div>Vous êtes désormais inscrit. <a href=\"login.php\"><u>Cliquez ici pour vous premièrere connexion</u></a></div>";
             echo $contenu;       
 
         }

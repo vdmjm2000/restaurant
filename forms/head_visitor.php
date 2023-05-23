@@ -48,7 +48,7 @@
 
       <a href="../index.php" class="logo d-flex align-items-center me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="./images/logo.jpg" alt="" width="120" height="80px">
         <h1>Chef Jean-Mi<span>.</span></h1>
       </a>
 
