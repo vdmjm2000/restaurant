@@ -21,8 +21,9 @@ Ce projet est un site Web développé en PHP pour un restaurant. Il permet aux u
 4. Configurez les paramètres de connexion à la base de données dans le fichier `init.inc.php`.
 5. Lancez le serveur web et accédez au site dans votre navigateur.
 
-## Utilisation
+## Utilisation en ligne
 
+- Accéder au site via l'URL https://www.vdmjm.com/
 - Accédez à la page d'accueil du site pour consulter les plats récemment ajoutés ainsi que les différents menus proposés
 - Utilisez le formulaire de réservation pour réserver une table (bouton "Reserver une table")
 - Connectez-vous à l'interface d'administration (en utilisant l'identifiant / MDP : testECF@test.fr / TestECF!) pour gérer les plats, les menus, les horaires et les réservations.
