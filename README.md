@@ -24,7 +24,7 @@ Ce projet est un site Web développé en PHP pour un restaurant. Il permet aux u
 
 9. Lancer le script : 
 
-UPDATE `user` SET `admin` = '1' WHERE `user`.`id` = 1 AND `user`.`nom` = 'Doe';
+UPDATE `user` SET `admin` = '1' WHERE `user`.`id` = 1;
 
 Ceci permettra de donner le rôle d'administrateur
 
