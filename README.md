@@ -25,7 +25,7 @@ Ce projet est un site Web développé en PHP pour un restaurant. Il permet aux u
 
 - Accédez à la page d'accueil du site pour consulter les plats récemment ajoutés ainsi que les différents menus proposés
 - Utilisez le formulaire de réservation pour réserver une table (bouton "Reserver une table")
-- Connectez-vous à l'interface d'administration en utilisant les identifiants ( email ; MDP) pour gérer les plats, les menus, les horaires et les réservations.
+- Connectez-vous à l'interface d'administration (en utilisant l'identifiant / MDP : testECF@test.fr / TestECF!) pour gérer les plats, les menus, les horaires et les réservations.
 
 ## Déploiement
 
