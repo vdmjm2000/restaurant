@@ -91,7 +91,7 @@
 
 
       <?php
-  if(isset($_POST['date'])) {
+if(isset($_POST['date'])) {
     $selected_date = $_POST['date'];
 
     // Obtenir la capacité totale pour la date sélectionnée
@@ -99,50 +99,66 @@
     $result = mysqli_query($mysqli, $query);
     $available_times = array();
 
+    // Obtention de la date et de l'heure actuelles
+    $currentDateTime = time();
+
     while ($row = mysqli_fetch_assoc($result)) {
-      $time = $row['formatted_hour_booking'];
-      $capacity = $row['capacity'];
-      $query2 = "SELECT SUM(nbr_people) as total_people FROM booking WHERE date_booking='$selected_date' AND time_booking='$time'";
-      $result2 = mysqli_query($mysqli, $query2);
-      $row2 = mysqli_fetch_assoc($result2);
-      $total_people = $row2['total_people'];
-      if (($total_people + $_POST['guests']) <= $capacity) {
-        $remaining_capacity = $capacity - $total_people;
-        array_push($available_times, array("time" => $time, "capacity" => $remaining_capacity));
-      }
+        $time = $row['formatted_hour_booking'];
+        $capacity = $row['capacity'];
+
+        // Convertir la date et l'heure sélectionnées en timestamp
+        $selectedDateTime = strtotime($selected_date . ' ' . $time);
+
+        // Vérifier si la date sélectionnée est postérieure à la date actuelle
+        if ($selectedDateTime >= strtotime('today')) {
+            // Si la date sélectionnée est la date actuelle, vérifier si l'heure sélectionnée est supérieure à l'heure actuelle
+            if ($selectedDateTime > $currentDateTime) {
+                $query2 = "SELECT SUM(nbr_people) as total_people FROM booking WHERE date_booking='$selected_date' AND time_booking='$time'";
+                $result2 = mysqli_query($mysqli, $query2);
+                $row2 = mysqli_fetch_assoc($result2);
+                $total_people = $row2['total_people'];
+
+                if (($total_people + $_POST['guests']) <= $capacity) {
+                    $remaining_capacity = $capacity - $total_people;
+                    array_push($available_times, array("time" => $time, "capacity" => $remaining_capacity));
+                }
+            }
+        }
     }
 
     if (count($available_times) > 0) {
 
-      foreach ($available_times as $time_capacity) {
-        echo '<div class="btn-group btn-group-toggle=" data-toggle="buttons">';
-        echo '<label class="btn btn-secondary">';
-        echo '<input type="radio" name="time_book"  value="' . $time_capacity['time'] . '" onclick="changeColor(this)">&nbsp;&nbsp;' . $time_capacity['time'] . '&nbsp;&nbsp;&nbsp;';
-        echo '(' . $time_capacity['capacity'] . ')&nbsp;&nbsp;&nbsp;';
-        echo '</label>';
-        echo '</div>';
+        foreach ($available_times as $time_capacity) {
+            echo '<div class="btn-group btn-group-toggle=" data-toggle="buttons">';
+            echo '<label class="btn btn-secondary">';
+            echo '<input type="radio" name="time_book"  value="' . $time_capacity['time'] . '" onclick="changeColor(this)">&nbsp;&nbsp;' . $time_capacity['time'] . '&nbsp;&nbsp;&nbsp;';
+            //echo '(' . $time_capacity['capacity'] . ')&nbsp;&nbsp;&nbsp;';
+            echo '</label>';
+            echo '</div>';
+        }
+    } else {
+        echo 'Aucun horaire disponible pour la date sélectionnée avec le nombre de personnes renseigné';
+        echo '<br>';
+        echo 'Veuillez renseigner une autre date <a href="./booking.php">&nbsp; ici </a>';
+      }
+
+      //echo 'le nombre de personne sélectionné est ' . $_POST['guests'];
+  
+      // n'affiche pas le bouton "Reserver" si il n'y a plus de créneau disponilble
+      if (count($available_times) > 0) {
+        echo '<div>
+          <br>
+          <input type="submit" value="Réserver">
+          <div>';
       }
     } else {
-      echo 'Aucun horaire disponible pour la date sélectionnée avec le nombre de personnes renseigné';
-      echo '<br>';
-      echo 'Veuillez renseigner une autre date <a href="./booking.php">&nbsp; ici </a>';
+      echo 'La date n\'a pas été sélectionnée.';
     }
-
-    //echo 'le nombre de personne sélectionné est ' . $_POST['guests'];
-
-    // n'affiche pas le bouton "Reserver" si il n'y a plus de créneau disponilble
-    if (count($available_times) > 0) {
-      echo '<div>
-        <br>
-        <input type="submit" value="Réserver">
-        <div>';
-    }
-  } else {
-    echo 'La date n\'a pas été sélectionnée.';
-  }
-
-
-?>
+  
+  
+  ?>
+3
+  
 
     </form>
 
