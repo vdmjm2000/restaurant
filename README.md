@@ -19,14 +19,32 @@ Ce projet est un site Web développé en PHP pour un restaurant. Il permet aux u
 2. Clonez ce dépôt dans votre répertoire de serveur web. (https://github.com/vdmjm2000/restaurant.git)
 3. Importez la base de données fournie dans le fichier `bdd.sql`.
 4. Configurez les paramètres de connexion à la base de données dans le fichier `init.inc.php`.
-5. Lancez le serveur web et accédez au site dans votre navigateur.
+6. Lancez le serveur web et accédez au site dans votre navigateur.
+7. Créer un premier User qui sera l'Admin via la page http://localhost/restaurant/forms/register.php
+9. Lancer la requête : 
 
-## Utilisation
+UPDATE `user` SET `admin` = '1' WHERE `user`.`id` = 1;
 
-- Accédez à la page d'accueil du site pour consulter les plats récemment ajoutés ainsi que les différents menus proposés
+Ceci permettra de donner le rôle d'administrateur
+
+ * Attention au user.id qui peut être modifiable selon l'ID de du User de créé. Dans ce cas on suppose que le premier User à forcément l'ID 1.
+
+
+## Utilisation en ligne
+
+- Accéder au site via l'URL https://www.vdmjm.com/
+- Accédez à la page d'accueil du site (index.php) pour consulter les plats récemment ajoutés ainsi que les différents menus proposés
 - Utilisez le formulaire de réservation pour réserver une table (bouton "Reserver une table")
-- Connectez-vous à l'interface d'administration en utilisant les identifiants ( email ; MDP) pour gérer les plats, les menus, les horaires et les réservations.
+- Connectez-vous à l'interface d'administration (en utilisant l'identifiant / MDP : testECF@test.fr / TestECF!) pour gérer les plats, les menus, les horaires et les réservations.
 
+## Déploiement
+
+- Logiciel ftp, SFTP type Filezilla
+- Domaine : vdmjm.com
+Nom d'utilisateur : z95aoomu
+Mot de passe : ml15p2]}4{y-
+Panneau de contrôle Hébergement: https://lhcp3190.webapps.net:2083/
+Adresse IP du serveur internet : 81.88.52.190
 
 
 ## Auteurs
