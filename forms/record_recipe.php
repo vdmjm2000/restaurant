@@ -2,7 +2,6 @@
 
 //header("location:dashbordAdmin.php#recipe");
 
-
 require_once("./init.inc.php");
 
 //------------------------------ TRAITEMENTS PHP ---------------------------------//
@@ -11,8 +10,6 @@ if(!internauteEstConnecte()) header("location:login.php");
 //--------------------------------- AFFICHAGE HTML ---------------------------------//
 
 require_once("./head.php");
-
-
 
 if (isset($_POST['list_category'],  $_POST['titre'], $_POST['description'], $_POST['prix'], $_FILES['image']['tmp_name'])) {
    $list_categorie = $_POST['list_category'];
@@ -37,7 +34,7 @@ if (isset($_POST['list_category'],  $_POST['titre'], $_POST['description'], $_PO
       $id_categorie = null; // ou afficher un message d'erreur
    }
 
-   if (is_uploaded_file($image['tmp_name'])) {
+   if ($_FILES['image']['error'] === UPLOAD_ERR_OK) {
       if (move_uploaded_file($image['tmp_name'], $image_path)) {
          // Connect to the database
          //$mysqli = new mysqli("localhost", "root", "", "restaurant");
@@ -54,10 +51,10 @@ if (isset($_POST['list_category'],  $_POST['titre'], $_POST['description'], $_PO
 
          mysqli_close($mysqli);
       } else {
-         echo "Erreur lors de la déplacement de l'image vers le répertoire de stockage.";
+         echo "Erreur lors du déplacement de l'image vers le répertoire de stockage.";
       }
    } else {
-      echo "Erreur lors du téléchargement de l'image.";
+      echo "Erreur lors du téléchargement de l'image. Code d'erreur : " . $_FILES['image']['error'];
    }
 }
 

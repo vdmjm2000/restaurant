@@ -21,7 +21,7 @@ if ($mysqli->connect_error) die('Un problème est survenu lors de la tentative d
 
   //$mysqli = new mysqli("localhost", "z95aoomu", "ml15p2]}4{y-", "z95aoomu_restaurant");
 //if ($mysqli->connect_error) die('Un problème est survenu lors de la tentative de connexion à la BDD : ' . $mysqli->connect_error);
- //$mysqli->set_charset("utf8");
+// $mysqli->set_charset("utf8");
 //}
 
  
