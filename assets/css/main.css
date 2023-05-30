@@ -147,6 +147,44 @@ section {
   margin-top: 90px;
 }
 
+/* --------
+ Dasboard Réeservation
+ ----------*/
+
+
+/* Styles spécifiques pour les appareils mobiles */
+@media (max-width: 575px) {
+  .mt-md-3 {
+    margin-top: 3rem !important;
+  }
+
+  .table-responsive {
+    overflow-x:auto;
+  }
+}
+
+/* Styles pour les appareils de taille moyenne et supérieure */
+@media (min-width: 575px) {
+  .mt-md-3 {
+    margin-top: 0;
+  }
+}
+
+
+/* --------
+ Dasboard Ajout plats
+ ----------*/
+
+
+
+/* Ajout plats - affichage résutat */
+
+/* Styles spécifiques pour les appareils mobiles */
+
+
+
+
+
 @media (max-width: 575px) {
   .breadcrumbs {
     margin-top: 70px;
