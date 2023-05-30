@@ -18,7 +18,7 @@ if (!internauteEstConnecteEtEstAdmin()) header("location:login.php");
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <title>Bootstrap Nav Pills</title>
-  
+
 </head>
 
 <body>
@@ -30,21 +30,23 @@ if (!internauteEstConnecteEtEstAdmin()) header("location:login.php");
   </nav>
 
 
-  <div class="tab-content mt-3">
+  <div class="tab-content mt-md-3">
     <div class="tab-pane fade show active" id="reservation">
       <h3>Reservation</h3>
       <p>Tableau de reservations en cours</p>
       <?php
       $resultat = executeRequete("SELECT user.nom AS Nom , user.tel AS Téléphone, user.commentaire, DATE_FORMAT(booking.date_booking, '%d/%m/%y') AS Jour, DATE_FORMAT(booking.time_booking, '%H:%i') AS Heure, booking.nbr_people AS Nombre
-                  FROM user 
-                  JOIN booking 
-                  ON user.id = booking.id_user 
-                  AND DATE(booking.date_booking) >= CURDATE()
-                  ORDER BY date_booking asc; ");
+                    FROM user 
+                    JOIN booking 
+                    ON user.id = booking.id_user 
+                    AND DATE(booking.date_booking) >= CURDATE()
+                    ORDER BY date_booking asc; ");
 
       $contenu_reservation .= '<h2> Affichage des reservations </h2>';
       $contenu_reservation .= 'Nombre de reservation : ' . $resultat->num_rows;
-      $contenu_reservation .= '<table class="table table-striped"p id="profile" border="1"><tr>';
+      $contenu_reservation .= '<div class="table-responsive">';
+      $contenu_reservation .= '<table class="table table-striped" id="profile" border="1">';
+      $contenu_reservation .= '<thead><tr>';
 
       while ($colonne = $resultat->fetch_field()) {
         $contenu_reservation .= '<th>' . $colonne->name . '</th>';
@@ -52,57 +54,52 @@ if (!internauteEstConnecteEtEstAdmin()) header("location:login.php");
 
       //$contenu .= '<th>Modification</th>';
       //$contenu .= '<th>Supression</th>';
-      $contenu_reservation .= '</tr>';
+      $contenu_reservation .= '</tr></thead><tbody>';
 
       while ($ligne = $resultat->fetch_assoc()) {
         $contenu_reservation .= '<tr>';
-        foreach ($ligne as $indice => $information) { {
-            $contenu_reservation .= '<td>' . $information . '</td>';
-          }
+        foreach ($ligne as $indice => $information) {
+          $contenu_reservation .= '<td>' . $information . '</td>';
         }
         // $contenu .= '<td><a href="?action=modification&id_produit=' . $ligne['id_booking'] .'"><img src="../photo/icone/edit.png"></a></td>';
         // $contenu .= '<td><a href="?action=suppression&id_produit=' . $ligne['id_booking'] .'" OnClick="return(confirm(\'En êtes vous certain ?\'));"><img src="../photo/icone/delete.png"></a></td>';
         $contenu_reservation .= '</tr>';
       }
-      $contenu_reservation .= '</table><br><hr><br>';
+      $contenu_reservation .= '</tbody></table></div><br><hr><br>';
 
       echo $contenu_reservation;
-
       ?>
     </div>
+
 
 
     <div class="tab-pane fade" id="plat">
       <h3>Plats</h3>
       <p>Ajout/suppression de plats</p>
-      <?php
 
-      // Affichage de la popup print
-      echo '<script type="text/javascript">
+      <script type="text/javascript">
         function showPrintPopup() {
-            var printPopup = window.open("", "printPopup", "width=500,height=500");
-            printPopup.document.write("<html><head><title>Popup print</title></head><body>");
-            printPopup.document.write("<h1>Ajouter une nouvelle catégorie</h1>");
-            printPopup.document.write("<form method=\"post\" action=\"ajouter_categorie.php\">"); // Ouvre le formulaire avec laction "ajouter_categorie.php"
-            printPopup.document.write("<label for=\"name\">Nom :</label>"); // Utilise "name" comme identifiant plutôt que "categorie_recipe"
-            printPopup.document.write("<input type=\"text\" id=\"categorie\" name=\"categorie\" placeholder=\"Entrez le nom de la catégorie\">"); // Ajoute un champ texte pour le nom de la catégorie
-            printPopup.document.write("<input type=\"submit\" value=\"Ajouter catégorie\">");
-            printPopup.document.write("</form>");
-            printPopup.document.write("</body></html>");
-            printPopup.document.close();
+          var printPopup = window.open("", "printPopup", "width=500,height=500");
+          printPopup.document.write("<html><head><title>Popup print</title></head><body>");
+          printPopup.document.write("<h1>Ajouter une nouvelle catégorie</h1>");
+          printPopup.document.write("<form method=\"post\" action=\"ajouter_categorie.php\">");
+          printPopup.document.write("<label for=\"name\">Nom :</label>");
+          printPopup.document.write("<input type=\"text\" id=\"categorie\" name=\"categorie\" placeholder=\"Entrez le nom de la catégorie\">");
+          printPopup.document.write("<input type=\"submit\" value=\"Ajouter catégorie\">");
+          printPopup.document.write("</form>");
+          printPopup.document.write("</body></html>");
+          printPopup.document.close();
         }
-        </script>';
+      </script>
 
-      // Bouton pour afficher la popup print
-      echo '<button onclick="showPrintPopup()">Ajouter catégorie</button>';
+      <button onclick="showPrintPopup()">Ajouter catégorie</button>
 
-
-
+      <?php
       $resultat_catégoriePlat = executeRequete1("SELECT name FROM categorie_recipe");
       ?>
 
       <div class="container">
-        <form enctype="multipart/form-data" action="record_recipe.php" method="post">
+        <form enctype="multipart/form-data" action="record_recipe.php" method="post" class="recipe-form">
           <div class="form-group">
             <label for="list_category">Catégorie</label>
             <br>
@@ -114,34 +111,35 @@ if (!internauteEstConnecteEtEstAdmin()) header("location:login.php");
               <?php endwhile; ?>
             </select>
           </div>
-      </div>
-      <div class="form-group">
-        <label for="titre">Titre:</label>
-        <input type="text" class="form-control" id="titre" name="titre">
-      </div>
-      <div class="form-group">
-        <label for="description">Description:</label>
-        <textarea class="form-control" id="description" name="description"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="prix">Prix:</label>
-        <input type="number" class="form-control" id="prix" name="prix">
-      </div>
-      <br>
-      <div class="form-group">
-        <label for="image">Image:</label>
-        <br>
-        <input type="hidden" name="MAX_FILE_SIZE" value="250000" />
-        <input type="file" name="image" size=50 capture />
-      </div>
-      <br>
-      <div class="form-group">
-        <button type="submit" class="">Enregistrer</button>
-      </div>
-      </form>
+          <div class="form-group">
+            <label for="titre">Titre:</label>
+            <input type="text" class="form-control" id="titre" name="titre">
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="prix">Prix:</label>
+            <input type="number" class="form-control" id="prix" name="prix">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="image">Image:</label>
+            <br>
+            <input type="hidden" name="MAX_FILE_SIZE" value="52428800" />
+            <input type="file" name="image" size="50" capture />
+          </div>
+          <br>
+          <div class="form-group">
+            <button type="submit" class="">Enregistrer</button>
+          </div>
+        </form>
 
-      <?php require_once("./recipe.php"); ?>
+        <?php require_once("./recipe.php"); ?>
+      </div>
     </div>
+
 
 
 
@@ -280,8 +278,8 @@ if (!internauteEstConnecteEtEstAdmin()) header("location:login.php");
       ?>
     </div>
   </div>
-<?php require_once("./footer.php");
-?>
+  <?php require_once("./footer.php");
+  ?>
 
 </body>
 
