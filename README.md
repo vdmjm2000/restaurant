@@ -49,5 +49,5 @@ Adresse IP du serveur internet : 81.88.52.190
 
 ## Auteurs
 
-- Jean-Michel Van Der Meeren
+- Jean-Michel Van Der Meeren.
 
